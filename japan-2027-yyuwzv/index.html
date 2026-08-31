@@ -3,509 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Japan 2027 — Tokyo + SCANDAL Mito</title>
   <meta name="robots" content="noindex">
+  <title>Private itinerary</title>
   <style>
-    :root { color-scheme: light; --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --bg:#f8fafc; --card:#fff; --accent:#4f46e5; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
-    header { padding:28px 18px 18px; background:linear-gradient(135deg,#312e81,#4f46e5); color:white; }
-    .wrap { max-width: 820px; margin: 0 auto; }
-    h1 { margin:0 0 8px; font-size: clamp(28px, 7vw, 48px); letter-spacing:-0.04em; }
-    .meta { opacity:.86; font-size:14px; }
-    main { padding: 18px; }
-    .day { margin: 0 auto 20px; max-width:820px; }
-    h2 { margin: 22px 0 12px; font-size: 18px; }
-    ol { list-style:none; margin:0; padding:0; border-left:3px solid var(--line); }
-    .stop { display:grid; grid-template-columns: 82px 1fr; gap:12px; margin:0 0 14px; padding-left:14px; }
-    .time { font-size:12px; color:var(--muted); padding-top:14px; margin-left:-14px; }
-    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px; box-shadow:0 6px 20px rgba(15,23,42,.06); }
-    .activity { color:var(--accent); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
-    h3 { margin:4px 0 6px; font-size:18px; }
-    p { margin:0; }
-    .address,.note { color:var(--muted); font-size:13px; line-height:1.4; }
-    .note { margin-top:7px; color:#374151; }
-    .links { margin-top:10px; }
-    a { color:var(--accent); font-weight:700; text-decoration:none; }
-    .labels { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
-    .labels span { font-size:11px; color:#374151; background:#eef2ff; padding:3px 8px; border-radius:999px; }
-    footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
-    @media (max-width: 520px) { .stop { grid-template-columns: 1fr; gap:4px; } .time { margin-left:0; padding-top:0; font-weight:700; } ol { border-left:0; } }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(135deg,#312e81,#4f46e5); color:#111827; }
+    .box { width:min(92vw,440px); background:white; border-radius:22px; padding:24px; box-shadow:0 24px 70px rgba(15,23,42,.3); }
+    h1 { margin:0 0 10px; font-size:28px; letter-spacing:-.03em; }
+    p { color:#6b7280; line-height:1.5; }
+    input,button { width:100%; font:inherit; border-radius:12px; padding:12px 14px; }
+    input { border:1px solid #d1d5db; }
+    button { margin-top:10px; border:0; background:#4f46e5; color:white; font-weight:800; cursor:pointer; }
+    .err { color:#b91c1c; min-height:1.3em; font-size:13px; }
+    .hint { font-size:12px; color:#6b7280; }
   </style>
 </head>
 <body>
-<header><div class="wrap">
-  <h1>Japan 2027 — Tokyo + SCANDAL Mito</h1>
-  <div class="meta">2027-02-02 → 2027-02-08 · read-only share · 36 public stops</div>
-</div></header>
-<main>
-        <section class="day">
-          <h2>Tuesday, Feb 2</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">8:30 am–9:15 am</div>
-              <div class="card">
-                <div class="activity">Breakfast before airport / flight</div>
-                <h3>Breakfast before flight / ORD</h3>
-                <p class="address">Chicago O&#x27;Hare / before airport</p>
-                <p class="note">Light pre-flight meal placeholder.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=41.9742%2C-87.9073" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>flight-day</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">11:00 am–11:45 am</div>
-              <div class="card">
-                <div class="activity">Lunch / airport meal before flight</div>
-                <h3>Lunch / airport meal before long-haul flight</h3>
-                <p class="address">Chicago O&#x27;Hare / in transit</p>
-                <p class="note">Placeholder; adjust after actual flight is booked.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=41.9742%2C-87.9073" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>lunch</span> <span>flight-day</span> <span>airport</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">12:00 pm–4:00 am</div>
-              <div class="card">
-                <div class="activity">Fly US ➝ Tokyo</div>
-                <h3>Chicago O&#x27;Hare (ORD)</h3>
-                <p class="address">O&#x27;Hare International Airport, Chicago, IL</p>
-                <p class="note">Flight time placeholder; confirm actual airport/times later. Calendar day preserved from recovered plan.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=41.9742%2C-87.9073" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>airport</span> <span>flight</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Wednesday, Feb 3</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">8:30 am–9:15 am</div>
-              <div class="card">
-                <div class="activity">Breakfast in transit / arrival morning</div>
-                <h3>In-flight / arrival breakfast</h3>
-                <p class="address">In transit to Tokyo</p>
-                <p class="note">Flight timing placeholder.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>arrival-day</span> <span>in-transit</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">12:30 pm–1:15 pm</div>
-              <div class="card">
-                <div class="activity">Lunch in transit / arrival-day meal</div>
-                <h3>In-flight / arrival-day lunch</h3>
-                <p class="address">In transit to Tokyo</p>
-                <p class="note">Flight/arrival timing placeholder; keep flexible.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>lunch</span> <span>arrival-day</span> <span>in-transit</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">5:00 pm–6:00 pm</div>
-              <div class="card">
-                <div class="activity">Arrive Tokyo / check in at Mitsui Garden Hotel Nihonbashi Premier</div>
-                <h3>Mitsui Garden Hotel Nihonbashi Premier</h3>
-                <p class="address">4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan</p>
-                <p class="note">Arrival time placeholder. Hotel candidate saved: Mitsui Garden Hotel Nihonbashi Premier in Nihonbashi/Mitsukoshimae. If arrival is early enough, consider Setsubun at Zojoji/Kanda Myojin before dinner.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6882291%2C139.7734659" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>hotel</span> <span>saved-hotel</span> <span>candidate</span> <span>nihonbashi</span> <span>mitsukoshimae</span> <span>tokyo-station-access</span> <span>japan-2027</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">7:00 pm–8:15 pm</div>
-              <div class="card">
-                <div class="activity">Tokyo Station Ramen Street dinner</div>
-                <h3>Tokyo Station Ramen Street / Rokurinsha option</h3>
-                <p class="address">Tokyo Ramen Street, Tokyo Station Ichibangai, Marunouchi, Tokyo</p>
-                <p class="note">Arrival night: do ramen/tsukemen at Tokyo Ramen Street; keep flexible based on lines and how tired you are.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6817%2C139.768" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>ramen</span> <span>tsukemen</span> <span>tokyo-station</span> <span>ramen-street</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Thursday, Feb 4</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">9:00 am–10:00 am</div>
-              <div class="card">
-                <div class="activity">Breakfast near hotel / Tokyo Station</div>
-                <h3>Breakfast near Mitsui Garden Hotel Nihonbashi Premier</h3>
-                <p class="address">4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan</p>
-                <p class="note">Keep morning easy before the 11:00 pillow appointment.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6882291%2C139.7734659" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>coffee</span> <span>hotel-base</span> <span>mitsui-garden-nihonbashi</span> <span>nihonbashi</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">1:15 pm–2:15 pm</div>
-              <div class="card">
-                <div class="activity">Lunch near Nihonbashi / Tokyo Station</div>
-                <h3>Lunch: Tsujihan Nihonbashi backup</h3>
-                <p class="address">Nihonbashi, Tokyo</p>
-                <p class="note">Added to ensure lunch is explicitly protected after the pillow appointment.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6807167%2C139.7715771" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>lunch</span> <span>seafood</span> <span>donburi</span> <span>nihonbashi</span> <span>backup</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">3:30 pm–5:30 pm</div>
-              <div class="card">
-                <div class="activity">teamLab Borderless</div>
-                <h3>teamLab Borderless Azabudai Hills</h3>
-                <p class="address">Azabudai Hills, Minato City, Tokyo</p>
-                <p class="note">Moved to a weekday because Tokyo Borderless works better off-weekend. Book timed entry; leaves buffer before 18:30 omakase.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6620024%2C139.7434178" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>museum</span> <span>digital-art</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">6:30 pm–8:30 pm</div>
-              <div class="card">
-                <div class="activity">Omakase dinner</div>
-                <h3>Manten Sushi Marunouchi</h3>
-                <p class="address">Marunouchi, Chiyoda City, Tokyo</p>
-                <p class="note">Practical target; reserve exact restaurant later.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6788733%2C139.7629812" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>sushi</span> <span>omakase</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">9:00 pm–10:30 pm</div>
-              <div class="card">
-                <div class="activity">Optional famous bar nightcap</div>
-                <h3>Bar High Five</h3>
-                <p class="address">Ginza, Chuo City, Tokyo</p>
-                <p class="note">Use if not exhausted; otherwise save energy for Friday/Saturday.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6715955%2C139.7629368" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>bar</span> <span>cocktails</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Friday, Feb 5</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">9:30 am–10:30 am</div>
-              <div class="card">
-                <div class="activity">Breakfast / coffee before Harajuku</div>
-                <h3>Breakfast / coffee before Harajuku</h3>
-                <p class="address">Harajuku / Shibuya, Tokyo</p>
-                <p class="note">Leaves buffer before First Arrows.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6702%2C139.7026" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>coffee</span> <span>harajuku</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">11:30 am–12:45 pm</div>
-              <div class="card">
-                <div class="activity">First Arrows silver shopping</div>
-                <h3>First Arrows Tokyo / Harajuku</h3>
-                <p class="address">Harajuku / Jingumae, Shibuya City, Tokyo</p>
-                <p class="note">Family necklace/gift; earlier in day for sizing/customization buffer.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6696%2C139.7052" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>shopping</span> <span>silver</span> <span>jewelry</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">1:00 pm–2:00 pm</div>
-              <div class="card">
-                <div class="activity">Lunch: ramen in Harajuku</div>
-                <h3>Lunch: Kyushu Jangara Ramen Harajuku</h3>
-                <p class="address">Harajuku / Jingumae, Tokyo</p>
-                <p class="note">Added so Friday has an explicit lunch between shopping and Iyoshi Cola.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6696379%2C139.7033883" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>lunch</span> <span>ramen</span> <span>harajuku</span> <span>google-maps-list</span> <span>list-tokyo-james</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">2:00 pm–2:45 pm</div>
-              <div class="card">
-                <div class="activity">Iyoshi Cola / craft cola</div>
-                <h3>Iyoshi Cola / 伊良コーラ</h3>
-                <p class="address">Shibuya / Harajuku area, Tokyo</p>
-                <p class="note">Cola syrup/craft cola stop while already in Harajuku/Shibuya.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6659%2C139.7011" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>cola</span> <span>drinks</span> <span>google-maps-list</span> <span>list-tokyo-james</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">4:30 pm–6:00 pm</div>
-              <div class="card">
-                <div class="activity">Shimokitazawa pre-show dinner / drinks</div>
-                <h3>Shimokitazawa pre-show dinner / drinks</h3>
-                <p class="address">Shimokitazawa Station area, Kitazawa, Setagaya City, Tokyo</p>
-                <p class="note">Shifted concert night to Shimokitazawa; use this as food/drink buffer before the TBD live house instead of PERFECT BEER Shibuya.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6615657%2C139.6670604" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>food</span> <span>drinks</span> <span>pre-show</span> <span>shimokitazawa</span> <span>concert-night</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">7:30 pm–10:00 pm</div>
-              <div class="card">
-                <div class="activity">Second Tokyo concert placeholder — Shimokitazawa</div>
-                <h3>Shimokitazawa live house area</h3>
-                <p class="address">Shimokitazawa Station / live house area, Kitazawa, Setagaya City, Tokyo</p>
-                <p class="note">Preferred area: Shimokitazawa. Exact Feb 2027 gig TBD; monitor live houses such as SHELTER, CLUB Que, THREE, BASEMENTBAR, DaisyBar, and nearby venues.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6615657%2C139.6670604" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>concert</span> <span>live-house</span> <span>shimokitazawa</span> <span>placeholder</span> <span>nightlife</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">10:30 pm–12:00 am</div>
-              <div class="card">
-                <div class="activity">Optional Shimokitazawa post-show late food / bars</div>
-                <h3>Shimokitazawa post-show late food / bars</h3>
-                <p class="address">Shimokitazawa Station area, Kitazawa, Setagaya City, Tokyo</p>
-                <p class="note">Self-guided late food/bar decompression in Shimokitazawa if energy allows; otherwise return to the Nihonbashi hotel base.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6615657%2C139.6670604" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>bar</span> <span>late-night</span> <span>post-show</span> <span>shimokitazawa</span> <span>optional</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Saturday, Feb 6</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">9:30 am–10:30 am</div>
-              <div class="card">
-                <div class="activity">Slow breakfast near hotel</div>
-                <h3>Slow breakfast near hotel before Mito day trip</h3>
-                <p class="address">Tokyo Station / Nihonbashi / Ginza, Tokyo</p>
-                <p class="note">Protect energy before Mito / SCANDAL.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>concert-day</span> <span>hotel-base</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">12:30 pm–1:15 pm</div>
-              <div class="card">
-                <div class="activity">Lunch before Mito transit</div>
-                <h3>Lunch / ekiben before Mito</h3>
-                <p class="address">Tokyo Station, Tokyo</p>
-                <p class="note">Keep concert day protected: quick lunch/ekiben before heading to Mito.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>lunch</span> <span>ekiben</span> <span>tokyo-station</span> <span>concert-day</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">2:30 pm–4:30 pm</div>
-              <div class="card">
-                <div class="activity">Travel to Mito / arrive with buffer</div>
-                <h3>Mito LIGHT HOUSE</h3>
-                <p class="address">Mito LIGHT HOUSE, Minamimachi, Mito, Ibaraki</p>
-                <p class="note">Arrive 1.5–2.5 hours before doors for train delays, lockers, food, merch.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=36.3789%2C140.4712" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>concert</span> <span>live-house</span> <span>scandal</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">4:15 pm–5:00 pm</div>
-              <div class="card">
-                <div class="activity">Mito pre-show food / snack</div>
-                <h3>Mito pre-show food / snack</h3>
-                <p class="address">Near Mito LIGHT HOUSE, Mito, Ibaraki</p>
-                <p class="note">Before doors/merch; exact place TBD near venue/station.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=36.3789%2C140.4712" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>food</span> <span>snack</span> <span>dinner</span> <span>concert-day</span> <span>mito</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">5:00 pm–8:30 pm</div>
-              <div class="card">
-                <div class="activity">SCANDAL at Mito LIGHT HOUSE</div>
-                <h3>Mito LIGHT HOUSE</h3>
-                <p class="address">Mito LIGHT HOUSE, Minamimachi, Mito, Ibaraki</p>
-                <p class="note">SCANDAL FINAL TOUR 2026–2027. Open 17:00 / start 17:30.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=36.3789%2C140.4712" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>concert</span> <span>live-house</span> <span>scandal</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">9:00 pm–11:00 pm</div>
-              <div class="card">
-                <div class="activity">Return Mito ➝ Tokyo</div>
-                <h3>Mito LIGHT HOUSE</h3>
-                <p class="address">Mito LIGHT HOUSE, Minamimachi, Mito, Ibaraki</p>
-                <p class="note">Late return placeholder; confirm final train after tickets/transit are booked.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=36.3789%2C140.4712" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>concert</span> <span>live-house</span> <span>scandal</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">11:15 pm–12:00 am</div>
-              <div class="card">
-                <div class="activity">Optional post-concert late snack</div>
-                <h3>Post-concert late snack / decompression</h3>
-                <p class="address">Tokyo Station / hotel area</p>
-                <p class="note">Only if hungry/awake after returning to Tokyo.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>late-night</span> <span>snack</span> <span>evening</span> <span>concert-day</span> <span>optional</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Sunday, Feb 7</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">9:00 am–9:45 am</div>
-              <div class="card">
-                <div class="activity">Breakfast / coffee before Senso-ji</div>
-                <h3>Breakfast / coffee before Asakusa</h3>
-                <p class="address">Asakusa, Taito City, Tokyo</p>
-                <p class="note">Start Asakusa day with food instead of immediately sightseeing.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7148%2C139.7967" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>coffee</span> <span>asakusa</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">10:00 am–11:15 am</div>
-              <div class="card">
-                <div class="activity">Asakusa / Senso-ji</div>
-                <h3>Senso-ji</h3>
-                <p class="address">Senso-ji</p>
-                <p class="note">Seasonal/old Tokyo morning; pair with curry bread/snacks.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7148%2C139.7967" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>temple</span> <span>outdoor</span> <span>early-morning</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">11:15 am–12:00 pm</div>
-              <div class="card">
-                <div class="activity">Famous curry bread / snack stop</div>
-                <h3>Asakusa curry bread target</h3>
-                <p class="address">Asakusa / Senso-ji area, Taito City, Tokyo</p>
-                <p class="note">Pick exact curry bread shop later.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7139%2C139.7952" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>snack</span> <span>curry-bread</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">12:00 pm–1:00 pm</div>
-              <div class="card">
-                <div class="activity">Lunch around Asakusa / Kappabashi</div>
-                <h3>Lunch: Asakusa / Kappabashi</h3>
-                <p class="address">Asakusa / Kappabashi, Taito City, Tokyo</p>
-                <p class="note">Added because curry bread is a snack, not lunch.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7145%2C139.7905" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>lunch</span> <span>asakusa</span> <span>kappabashi</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">1:00 pm–3:00 pm</div>
-              <div class="card">
-                <div class="activity">Kappabashi cookingware / knives / scissors</div>
-                <h3>Kappabashi Kitchenware Street</h3>
-                <p class="address">Kappabashi Dougu Street, Taito City, Tokyo</p>
-                <p class="note">Keep purchases realistic for luggage; blades need checked luggage.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7149177%2C139.7889543" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>shopping</span> <span>cookingware</span> <span>knives</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">7:45 pm–9:45 pm</div>
-              <div class="card">
-                <div class="activity">Yakitori dinner or guided izakaya tour</div>
-                <h3>Yakitori dinner target (TBD)</h3>
-                <p class="address">Ginza / central Tokyo</p>
-                <p class="note">If guided Shinjuku izakaya/bar tour is a must, use it here and skip formal yakitori.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.672%2C139.763" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>restaurant</span> <span>yakitori</span> <span>tbd</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        
-        <section class="day">
-          <h2>Monday, Feb 8</h2>
-          <ol>
-            <li class="stop">
-              <div class="time">8:00 am–8:45 am</div>
-              <div class="card">
-                <div class="activity">Breakfast near hotel before checkout</div>
-                <h3>Breakfast near Mitsui Garden Hotel Nihonbashi Premier</h3>
-                <p class="address">4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan</p>
-                <p class="note">Departure-day breakfast before airport transit.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6882291%2C139.7734659" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>breakfast</span> <span>coffee</span> <span>hotel-base</span> <span>mitsui-garden-nihonbashi</span> <span>nihonbashi</span> <span>placeholder</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">8:30 am–9:45 am</div>
-              <div class="card">
-                <div class="activity">Optional winter peony garden</div>
-                <h3>Ueno Toshogu Peony Garden</h3>
-                <p class="address">Ueno Park, Taito City, Tokyo</p>
-                <p class="note">Only if midday flight timing permits; otherwise go straight to airport.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.7155%2C139.7712" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>seasonal</span> <span>garden</span> <span>peonies</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">10:30 am–12:00 pm</div>
-              <div class="card">
-                <div class="activity">Checkout from Mitsui Garden Hotel Nihonbashi Premier / airport transit</div>
-                <h3>Mitsui Garden Hotel Nihonbashi Premier</h3>
-                <p class="address">4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan</p>
-                <p class="note">Midday departure day; hotel candidate is Mitsui Garden Hotel Nihonbashi Premier.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.6882291%2C139.7734659" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>hotel</span> <span>saved-hotel</span> <span>candidate</span> <span>nihonbashi</span> <span>mitsukoshimae</span> <span>tokyo-station-access</span> <span>japan-2027</span></div>
-              </div>
-            </li>
-            
-            <li class="stop">
-              <div class="time">12:00 pm–12:45 pm</div>
-              <div class="card">
-                <div class="activity">Lunch before flight / at airport</div>
-                <h3>Lunch at airport / Tokyo Station</h3>
-                <p class="address">Tokyo Station / airport transit</p>
-                <p class="note">Departure-day protected lunch; exact location depends on confirmed flight time.</p>
-                <div class="links"><a href="https://www.google.com/maps/search/?api=1&amp;query=35.681236%2C139.767125" target="_blank" rel="noopener">Open in Google Maps</a></div>
-                <div class="labels"><span>lunch</span> <span>departure-day</span> <span>airport</span> <span>tokyo-station</span></div>
-              </div>
-            </li>
-            </ol>
-        </section>
-        </main>
-<footer>Generated 2026-08-31 11:28 · japan-2027-yyuwzv</footer>
+  <main class="box">
+    <h1>Unlock itinerary</h1>
+    <p>This share link is public, but the itinerary details are encrypted in the page. Enter the token from James to view it.</p>
+    <form id="unlock"><input id="token" autocomplete="current-password" placeholder="Token" autofocus><button>Open itinerary</button></form>
+    <p id="err" class="err"></p>
+    <p class="hint">Tip: shared links can include <code>#token=...</code> and the token will stay in this browser.</p>
+  </main>
+<script>
+window.__ENCRYPTED_ITINERARY__ = {"v":1,"kdf":"PBKDF2-HMAC-SHA256","cipher":"HMAC-SHA256-CTR-XOR","iterations":210000,"salt":"qZCyhzZV3FcqZvj30B25cg==","nonce":"I/W9ow3DgQ53qZSq1i9Zyw==","data":"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","mac":"0M1gdQDiM+y0UfkSLZqQChKPle6MNwLuoYAz7F3blOI="};
+const enc = new TextEncoder();
+const dec = new TextDecoder();
+function b64bytes(s) { return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
+function concat(...arrays) { const n = arrays.reduce((a,b)=>a+b.length,0); const out = new Uint8Array(n); let o=0; for (const a of arrays) { out.set(a,o); o+=a.length; } return out; }
+function u32(n) { return new Uint8Array([(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255]); }
+async function hmacKey(raw) { return crypto.subtle.importKey('raw', raw, {name:'HMAC', hash:'SHA-256'}, false, ['sign']); }
+async function derive(token, salt, iterations) {
+  const base = await crypto.subtle.importKey('raw', enc.encode(token), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits({name:'PBKDF2', salt, iterations, hash:'SHA-256'}, base, 512);
+  const key = new Uint8Array(bits);
+  return [key.slice(0,32), key.slice(32)];
+}
+async function stream(key, nonce, len) {
+  const hk = await hmacKey(key); const out = new Uint8Array(len); let pos = 0, ctr = 0;
+  while (pos < len) { const block = new Uint8Array(await crypto.subtle.sign('HMAC', hk, concat(nonce, u32(ctr++)))); out.set(block.slice(0, Math.min(block.length, len-pos)), pos); pos += block.length; }
+  return out;
+}
+async function unlock(token) {
+  const p = window.__ENCRYPTED_ITINERARY__, salt=b64bytes(p.salt), nonce=b64bytes(p.nonce), data=b64bytes(p.data), mac=b64bytes(p.mac);
+  const [ek, mk] = await derive(token, salt, p.iterations);
+  const hk = await hmacKey(mk);
+  const actual = new Uint8Array(await crypto.subtle.sign('HMAC', hk, concat(salt, nonce, u32(p.iterations), data)));
+  if (actual.length !== mac.length || actual.some((b,i)=>b!==mac[i])) throw new Error('Bad token');
+  const ks = await stream(ek, nonce, data.length);
+  const plain = new Uint8Array(data.length); for (let i=0; i<data.length; i++) plain[i] = data[i] ^ ks[i];
+  document.open(); document.write(dec.decode(plain)); document.close();
+}
+function tokenFromHash() { const h = new URLSearchParams(location.hash.replace(/^#/,'')); return h.get('token') || ''; }
+const saved = localStorage.getItem('itinerary-token') || tokenFromHash();
+if (saved) { document.getElementById('token').value = saved; unlock(saved).catch(()=>localStorage.removeItem('itinerary-token')); }
+document.getElementById('unlock').addEventListener('submit', ev => {
+  ev.preventDefault(); const token = document.getElementById('token').value.trim();
+  unlock(token).then(()=>localStorage.setItem('itinerary-token', token)).catch(()=>document.getElementById('err').textContent='That token did not work.');
+});
+</script>
 </body>
 </html>
