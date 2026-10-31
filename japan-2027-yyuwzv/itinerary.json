@@ -261,6 +261,18 @@
           "category": "food",
           "address": "Ginza Yamato Building 1F, 3-8-12 Ginza, Chuo City, Tokyo 104-0061",
           "googleMapsUrl": "https://maps.app.goo.gl/6XFzRZ12CqUaQ6VJ6"
+        },
+        {
+          "name": "Bombay Sizzlers — Kyobashi",
+          "category": "restaurant",
+          "address": "Tokyo Square Garden 1F, 3-1-1 Kyobashi, Chuo City, Tokyo 104-0031",
+          "googleMapsUrl": "https://maps.app.goo.gl/WkHVUuKwxtKvAWAW8"
+        },
+        {
+          "name": "Andhra Dining GINZA",
+          "category": "restaurant",
+          "address": "Ginza Premier Building 2F, 1-8-2 Ginza, Chuo City, Tokyo 104-0061",
+          "googleMapsUrl": "https://maps.app.goo.gl/XvfRsPt95WFPcBFQ9"
         }
       ]
     },
@@ -371,6 +383,12 @@
           "category": "restaurant",
           "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−3−6 森田ビル 4F",
           "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Ishiyama%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%923%E2%88%926%20%E6%A3%AE%E7%94%B0%E3%83%93%E3%83%AB%204F&query_place_id=ChIJje_QwB-LGGAR6YoBHRKUQHk"
+        },
+        {
+          "name": "TSUMINAKI Mapo Tofu — Toranomon / Nishi-Shimbashi",
+          "category": "restaurant",
+          "address": "2-13-9 Nishishinbashi, Minato City, Tokyo 105-0003",
+          "googleMapsUrl": "https://maps.app.goo.gl/41aosXJQQQhY3REF6"
         }
       ]
     },
@@ -1045,6 +1063,18 @@
       "googleMapsUrl": "https://maps.app.goo.gl/6XFzRZ12CqUaQ6VJ6"
     },
     {
+      "name": "Bombay Sizzlers — Kyobashi",
+      "category": "restaurant",
+      "address": "Tokyo Square Garden 1F, 3-1-1 Kyobashi, Chuo City, Tokyo 104-0031",
+      "googleMapsUrl": "https://maps.app.goo.gl/WkHVUuKwxtKvAWAW8"
+    },
+    {
+      "name": "Andhra Dining GINZA",
+      "category": "restaurant",
+      "address": "Ginza Premier Building 2F, 1-8-2 Ginza, Chuo City, Tokyo 104-0061",
+      "googleMapsUrl": "https://maps.app.goo.gl/XvfRsPt95WFPcBFQ9"
+    },
+    {
       "name": "HARBS Lumine Yurakucho",
       "category": "food",
       "address": "Japan, 〒100-0006 Tokyo, Chiyoda City, Yurakucho, 2 Chome−5−1 ルミネ有楽町店 ルミネ1 二階",
@@ -1097,6 +1127,12 @@
       "category": "restaurant",
       "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−3−6 森田ビル 4F",
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Ishiyama%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%923%E2%88%926%20%E6%A3%AE%E7%94%B0%E3%83%93%E3%83%AB%204F&query_place_id=ChIJje_QwB-LGGAR6YoBHRKUQHk"
+    },
+    {
+      "name": "TSUMINAKI Mapo Tofu — Toranomon / Nishi-Shimbashi",
+      "category": "restaurant",
+      "address": "2-13-9 Nishishinbashi, Minato City, Tokyo 105-0003",
+      "googleMapsUrl": "https://maps.app.goo.gl/41aosXJQQQhY3REF6"
     },
     {
       "name": "Bar High Five",
@@ -1261,5 +1297,5 @@
       "googleMapsUrl": null
     }
   ],
-  "version": "0c96a0046b9630aee72f6b2a2f2d758794409ea1d84722047414b72a6335896d"
+  "version": "6fe24212f8a86782059d9b2b4d1aceee31aeac80dc1dd2ac3e1f49118cff0c19"
 }
