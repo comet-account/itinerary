@@ -1,0 +1,108 @@
+--- a/scripts/export_share.py
++++ b/scripts/export_share.py
+@@ -282,0 +283,86 @@
++
++
++def json_is_excluded(record: dict[str, Any]) -> bool:
++    """Additional fail-closed publication flags, without changing legacy HTML."""
++    return (bool({str(x).strip().lower() for x in record.get("labels", [])} & PRIVATE_LABELS)
++            or any(record.get(key) is True for key in PRIVATE_LABELS)
++            or record.get("public") is False or record.get("published") is False
++            or str(record.get("visibility", "")).lower() in PRIVATE_LABELS)
++
++
++def json_string(value: Any) -> str:
++    if value is None:
++        return ""
++    if not isinstance(value, str):
++        raise ValueError("Public JSON string fields must be strings")
++    return value
++
++
++def json_maps_url(place: dict[str, Any]) -> str | None:
++    identity = place.get("googleMaps") or {}
++    if identity.get("status") in {"placeholder", "composite"}:
++        return None
++    for raw in (identity.get("sourceUrl"), place.get("url")):
++        if not isinstance(raw, str):
++            continue
++        url = urllib.parse.urlsplit(raw)
++        if url.scheme != "https" or url.username or url.password or url.fragment:
++            continue
++        if url.netloc == "maps.app.goo.gl" and re.fullmatch(r"/[A-Za-z0-9]+", url.path) and not url.query:
++            return raw
++        if url.netloc in {"www.google.com", "google.com", "maps.google.com"} and url.path.startswith(("/maps/search", "/maps/place")):
++            params = urllib.parse.parse_qs(url.query, keep_blank_values=True)
++            if set(params) <= {"api", "query", "query_place_id"}:
++                # Prefer a known Place ID over a less precise search-only source.
++                if identity.get("placeId") and "query_place_id" not in params and "/maps/place" not in url.path:
++                    continue
++                return raw
++    safe_place = {"name": json_string(place.get("name")),
++                  "location": {"address": json_string((place.get("location") or {}).get("address") or place.get("address"))},
++                  "googleMaps": {key: json_string(identity.get(key)) for key in ("name", "address", "placeId")}}
++    return maps_url(safe_place)
++
++
++def json_venue(place: dict[str, Any]) -> dict[str, Any]:
++    identity = place.get("googleMaps") or {}
++    return {
++        "name": json_string(place.get("name")),
++        "category": json_string(place.get("category")),
++        "address": json_string(identity.get("address") or (place.get("location") or {}).get("address") or place.get("address")),
++        "googleMapsUrl": json_maps_url(place),
++    }
++
++
++def public_itinerary_json(trip: dict[str, Any], places: dict[str, Any]) -> dict[str, Any]:
++    """Deliberately narrower than HTML: never serialize source objects or notes."""
++    if json_is_excluded(trip):
++        raise ValueError("Trip is excluded from public JSON publication")
++    stops = []
++    restaurants = []
++    for row in public_visits(trip, places):
++        visit, place = row["visit"], row["place"]
++        if json_is_excluded(visit) or json_is_excluded(place):
++            continue
++        venue = json_venue(place)
++        alternatives = []
++        candidates = list(visit.get("shoppingBackups", [])) + list((place.get("googleMaps") or {}).get("candidates", []))
++        for candidate in candidates:
++            resolved = places.get(candidate["placeRef"]) if "placeRef" in candidate else candidate
++            if not resolved or json_is_excluded(candidate) or json_is_excluded(resolved):
++                continue
++            alternative = json_venue(resolved)
++            if alternative not in alternatives:
++                alternatives.append(alternative)
++        duration = visit.get("durationMinutes")
++        if duration is not None and (type(duration) is not int or duration < 0):
++            raise ValueError("Public durationMinutes must be a nonnegative integer or null")
++        stops.append({**venue, "startTime": json_string(visit.get("startTime")),
++                      "durationMinutes": duration, "alternatives": alternatives})
++        for entry in [venue, *alternatives]:
++            if entry["category"] in {"food", "restaurant", "cafe"} and entry not in restaurants:
++                restaurants.append(entry)
++    result = {"schemaVersion": 1, "name": json_string(trip.get("name") or "Itinerary"),
++              "startDate": json_string(trip.get("startDate")), "endDate": json_string(trip.get("endDate")),
++              "stops": stops, "restaurants": restaurants}
++    result["version"] = hashlib.sha256(json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
++    return result
+@@ -806 +892 @@
+-def export_trip(trip: dict[str, Any], places: dict[str, Any], out_dir: Path, *, slug: str | None = None, token: str | None = None, photo_dir: Path | None = None) -> Path:
++def export_trip(trip: dict[str, Any], places: dict[str, Any], out_dir: Path, *, slug: str | None = None, token: str | None = None, photo_dir: Path | None = None, json_only: bool = False) -> Path:
+@@ -807,0 +894,8 @@
++    # Validate/serialize before any existing output is replaced.
++    public_json = json.dumps(public_itinerary_json(trip, places), ensure_ascii=False, indent=2) + "\n"
++    if json_only:
++        target_dir = out_dir / slug
++        target_dir.mkdir(parents=True, exist_ok=True)
++        target = target_dir / "itinerary.json"
++        target.write_text(public_json, encoding="utf-8")
++        return target
+@@ -828,0 +923 @@
++    (target_dir / "itinerary.json").write_text(public_json, encoding="utf-8")
+@@ -838,0 +934 @@
++    parser.add_argument("--json-only", action="store_true", help="Update public JSON only; preserve existing HTML and assets byte-for-byte")
+@@ -843 +939 @@
+-    path = export_trip(trip, places, Path(args.out), slug=slug, token=args.token, photo_dir=Path(args.app) / "data" / "place-photos")
++    path = export_trip(trip, places, Path(args.out), slug=slug, token=args.token, photo_dir=Path(args.app) / "data" / "place-photos", json_only=args.json_only)

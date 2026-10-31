@@ -1,0 +1,1265 @@
+{
+  "schemaVersion": 1,
+  "name": "Japan 2027 — Tokyo + SCANDAL Mito",
+  "startDate": "2027-02-02",
+  "endDate": "2027-02-08",
+  "stops": [
+    {
+      "name": "Breakfast before flight / ORD",
+      "category": "food",
+      "address": "Chicago O'Hare / before airport",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-02T08:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Chicago O'Hare (ORD)",
+      "category": "transport",
+      "address": "O'Hare International Airport, Chicago, IL",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-02T10:05",
+      "durationMinutes": 55,
+      "alternatives": []
+    },
+    {
+      "name": "Lunch / airport meal before long-haul flight",
+      "category": "food",
+      "address": "Chicago O'Hare / in transit",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-02T11:00",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Chicago O'Hare (ORD)",
+      "category": "transport",
+      "address": "O'Hare International Airport, Chicago, IL",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-02T13:05",
+      "durationMinutes": 0,
+      "alternatives": []
+    },
+    {
+      "name": "In-flight / arrival breakfast",
+      "category": "food",
+      "address": "In transit to Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-03T08:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "In-flight / arrival-day lunch",
+      "category": "food",
+      "address": "In transit to Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-03T12:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Tokyo Haneda Airport (HND)",
+      "category": "transport",
+      "address": "Haneda Airport, Ota City, Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20Airport%20%28HND%29%2C%20Haneda%20Airport%2C%20Ota%20City%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-03T17:45",
+      "durationMinutes": 75,
+      "alternatives": []
+    },
+    {
+      "name": "Haneda → Nihonbashi hotel transfer",
+      "category": "transport",
+      "address": "Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Haneda%20%E2%86%92%20Nihonbashi%20hotel%20transfer%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-03T19:00",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "Mitsui Garden Hotel Nihonbashi Premier",
+      "category": "accommodation",
+      "address": "Japan, 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 3 Chome−4−4 三井ガーデンホテル日本橋プレミア 9階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mitsui%20Garden%20Hotel%20Nihonbashi%20Premier%2C%20Japan%2C%20%E3%80%92103-0022%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashimuromachi%2C%203%20Chome%E2%88%924%E2%88%924%20%E4%B8%89%E4%BA%95%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%9B%E3%83%86%E3%83%AB%E6%97%A5%E6%9C%AC%E6%A9%8B%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%209%E9%9A%8E&query_place_id=ChIJ_6CJUFWJGGARv8kNhNPwtJk",
+      "startTime": "2027-02-03T20:00",
+      "durationMinutes": 30,
+      "alternatives": []
+    },
+    {
+      "name": "Nihonbashi hotel → Shinjuku transfer",
+      "category": "transport",
+      "address": "Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nihonbashi%20hotel%20%E2%86%92%20Shinjuku%20transfer%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-03T20:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Nichinichi Shinjuku (日日 新宿本店)",
+      "category": "food",
+      "address": "Eguchi Building 1F, 2-39-6 Kabukicho, Shinjuku City, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nichinichi+Shinjuku&query_place_id=ChIJD-E8-CeNGGARHIHmWqFpKic",
+      "startTime": "2027-02-03T21:15",
+      "durationMinutes": 45,
+      "alternatives": [
+        {
+          "name": "Osteria IL VIAGGIO",
+          "category": "food",
+          "address": "GranRoof 2F, Gransta Yaesu, 1-9-1 Marunouchi, Chiyoda City, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Osteria%20IL%20VIAGGIO%2C%20GranRoof%202F%2C%20Gransta%20Yaesu%2C%201-9-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo"
+        },
+        {
+          "name": "AWkitchen TOKYO — Shin-Marunouchi Building",
+          "category": "food",
+          "address": "Shin-Marunouchi Building 5F, 1-5-1 Marunouchi, Chiyoda City, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=AWkitchen%20TOKYO%20%E2%80%94%20Shin-Marunouchi%20Building%2C%20Shin-Marunouchi%20Building%205F%2C%201-5-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo"
+        },
+        {
+          "name": "Fuunji Shinjuku",
+          "category": "restaurant",
+          "address": "2-14-3 Yoyogi, Hokuto Daiichi Building 1F, Shibuya-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fuunji%20Shinjuku&query_place_id=ChIJ508frs-MGGARnIKrb_tkai0"
+        },
+        {
+          "name": "PERFECT BEER KITCHEN Nishi-Shinjuku",
+          "category": "food",
+          "address": "7-15-8 Nishi-Shinjuku, 1F 101, Shinjuku City, Tokyo 160-0023",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=PERFECT%20BEER%20KITCHEN%20Nishi-Shinjuku%2C%207-15-8%20Nishi-Shinjuku%2C%201F%20101%2C%20Shinjuku%20City%2C%20Tokyo%20160-0023&query_place_id=ChIJrZdO5ECNGGARLROc-y0tkoQ"
+        },
+        {
+          "name": "Sakaba Sinatra Tokyo / 酒場シナトラ 東京店",
+          "category": "food",
+          "address": "Tokyo Station Ichibangai 2F, Tokyo Gourmet Zone, 1-9-1 Marunouchi, Chiyoda City, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sakaba%20Sinatra%20Tokyo%2C%20Tokyo%20Station%20Ichibangai%202F%2C%20Tokyo%20Gourmet%20Zone%2C%201-9-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo&query_place_id=ChIJ-8s8zDKLGGARXyxpPsdLOzE"
+        }
+      ]
+    },
+    {
+      "name": "bar plastic model",
+      "category": "food",
+      "address": "1-1-10 Kabukicho, Shinjuku City, Tokyo 160-0021",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=bar+plastic+model&query_place_id=ChIJXXuZ90CNGGARH2fYWzaWfRU",
+      "startTime": "2027-02-03T22:15",
+      "durationMinutes": 60,
+      "alternatives": [
+        {
+          "name": "Albatross G",
+          "category": "food",
+          "address": "1-1-7 Kabukicho, Golden Gai 5th Street, Shinjuku City, Tokyo 160-0021",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albatross+G&query_place_id=ChIJa6nPcdmMGGARgAHVyVca7aI"
+        },
+        {
+          "name": "Tokyu Kabukicho Tower",
+          "category": "activity",
+          "address": "1-29-1 Kabukicho, Shinjuku-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyu%20Kabukicho%20Tower&query_place_id=ChIJP6oqgv2NGGARqV5VFswMftQ"
+        },
+        {
+          "name": "The Open Book",
+          "category": "food",
+          "address": "1-1-6 Kabukicho, Golden Gai 5th Street, Shinjuku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Open+Book&query_place_id=ChIJCb60cAWNGGARSeDfR-PVhWY"
+        },
+        {
+          "name": "TOTO Bar — marked permanently closed",
+          "category": "food",
+          "address": "1-1-8 Kabukicho, Akarui Hanazono 1st Street 2F, Shinjuku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TOTO+Bar&query_place_id=ChIJbaJpBACNGGARHDoFEARPEAU"
+        }
+      ]
+    },
+    {
+      "name": "Tsukiji Outer Market",
+      "category": "market",
+      "address": "Japan, 〒104-0045 Tokyo, Chuo City, Tsukiji, 4 Chome および６丁目一部",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fish%20Market%20Tsukiji%20Outer%20Market%2C%20Japan%2C%20%E3%80%92104-0045%20Tokyo%2C%20Chuo%20City%2C%20Tsukiji%2C%204%20Chome%20%E3%81%8A%E3%82%88%E3%81%B3%EF%BC%96%E4%B8%81%E7%9B%AE%E4%B8%80%E9%83%A8&query_place_id=ChIJW2cLzSGLGGARXAKXv6EkbqI",
+      "startTime": "2027-02-04T08:45",
+      "durationMinutes": 15,
+      "alternatives": []
+    },
+    {
+      "name": "Maguroya Kurogin · Tsukiji Honten",
+      "category": "food",
+      "address": "4 Chome-10-12 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Maguroya%20Kurogin%2C%204%20Chome-10-12%20Tsukiji%2C%20Chuo%20City%2C%20Tokyo%20104-0045%2C%20Japan&query_place_id=ChIJsQIg2t6LGGAR8w_OrbyqA3U",
+      "startTime": "2027-02-04T09:00",
+      "durationMinutes": 30,
+      "alternatives": [
+        {
+          "name": "SeaGen 海玄 — another-day candidate only",
+          "category": "restaurant",
+          "address": "4-13-8 Tsukiji, Solasia Building 1F, Chuo-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SeaGen%20%E6%B5%B7%E7%8E%84%20%E2%80%94%20another-day%20candidate%20only&query_place_id=ChIJ1x_6sReLGGARAzSUSIFloxs"
+        }
+      ]
+    },
+    {
+      "name": "Tsukiji Yamacho",
+      "category": "food",
+      "address": "4 Chome-10-10 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tsukiji+Yamacho&query_place_id=ChIJpYBA196LGGARHJnwxaxGNKg",
+      "startTime": "2027-02-04T09:35",
+      "durationMinutes": 10,
+      "alternatives": []
+    },
+    {
+      "name": "Yonemoto Coffee Honten",
+      "category": "cafe",
+      "address": "4 Chome-11-1 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yonemoto+Coffee+Head+Shop&query_place_id=ChIJoylsI9-LGGAREulpP6iK2yY",
+      "startTime": "2027-02-04T10:00",
+      "durationMinutes": 15,
+      "alternatives": [
+        {
+          "name": "Kaki Goya Tsukiji Shokudo",
+          "category": "food",
+          "address": "Japan, 〒104-0045 Tokyo, Chuo City, Tsukiji, 4 Chome−10−14 丸禎ビル1F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kakigoya%2C%20Japan%2C%20%E3%80%92104-0045%20Tokyo%2C%20Chuo%20City%2C%20Tsukiji%2C%204%20Chome%E2%88%9210%E2%88%9214%20%E4%B8%B8%E7%A6%8E%E3%83%93%E3%83%AB1F&query_place_id=ChIJ8c4X2d6LGGARjNJLJz1lAHg"
+        }
+      ]
+    },
+    {
+      "name": "Nishikawa Nihonbashi / Tokyo area store",
+      "category": "activity",
+      "address": "Japan, 〒103-0027 Tokyo, Chuo City, Nihonbashi, 1 Chome−4−1 一丁目三井ビルディング 地下 1階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nihonbashi%20Nishikawa%2C%20Japan%2C%20%E3%80%92103-0027%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashi%2C%201%20Chome%E2%88%924%E2%88%921%20%E4%B8%80%E4%B8%81%E7%9B%AE%E4%B8%89%E4%BA%95%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%20%E5%9C%B0%E4%B8%8B%201%E9%9A%8E&query_place_id=ChIJNWzsRVaJGGARwO8NgCafp04",
+      "startTime": "2027-02-04T10:15",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Nishikawa Nihonbashi / Tokyo area store",
+      "category": "activity",
+      "address": "Japan, 〒103-0027 Tokyo, Chuo City, Nihonbashi, 1 Chome−4−1 一丁目三井ビルディング 地下 1階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nihonbashi%20Nishikawa%2C%20Japan%2C%20%E3%80%92103-0027%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashi%2C%201%20Chome%E2%88%924%E2%88%921%20%E4%B8%80%E4%B8%81%E7%9B%AE%E4%B8%89%E4%BA%95%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%20%E5%9C%B0%E4%B8%8B%201%E9%9A%8E&query_place_id=ChIJNWzsRVaJGGARwO8NgCafp04",
+      "startTime": "2027-02-04T11:00",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Old Delhi",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−7−10 イグジットメルサ 7F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Old%20Delhi%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%927%E2%88%9210%20%E3%82%A4%E3%82%B0%E3%82%B8%E3%83%83%E3%83%88%E3%83%A1%E3%83%AB%E3%82%B5%207F&query_place_id=ChIJawXVyY-LGGAR3Np3Uh4Pf7Q",
+      "startTime": "2027-02-04T13:15",
+      "durationMinutes": 60,
+      "alternatives": [
+        {
+          "name": "Vomero",
+          "category": "food",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−12−8 NKCビル １F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pizzeria%20Trattoria%20Vomero%20Higashi-Ginza%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%9212%E2%88%928%20NKC%E3%83%93%E3%83%AB%20%EF%BC%91F&query_place_id=ChIJrygpw-CLGGARYvoz22ywuao"
+        },
+        {
+          "name": "Gino Sorbillo Artista Pizza Napoletana",
+          "category": "food",
+          "address": "Japan, 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 3 Chome−2−1 コレド室町テラス 1F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gino%20Sorbillo%20Artista%20Pizza%20Napoletana%2C%20Japan%2C%20%E3%80%92103-0022%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashimuromachi%2C%203%20Chome%E2%88%922%E2%88%921%20%E3%82%B3%E3%83%AC%E3%83%89%E5%AE%A4%E7%94%BA%E3%83%86%E3%83%A9%E3%82%B9%201F&query_place_id=ChIJdYw1HW-LGGAR1yl64PFEdqs"
+        },
+        {
+          "name": "Tsujita Ginza (つじ田 銀座店)",
+          "category": "food",
+          "address": "Ginza Yamato Building 1F, 3-8-12 Ginza, Chuo City, Tokyo 104-0061",
+          "googleMapsUrl": "https://maps.app.goo.gl/6XFzRZ12CqUaQ6VJ6"
+        }
+      ]
+    },
+    {
+      "name": "備前焼ギャラリー夢幻庵 銀座店 / Bizen-yaki Gallery Mugen-an Ginza",
+      "category": "activity",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−6−10 ミヤコビル ２F Ginza5-6-10 MIYAKO Buildg. Chuo-ku, TOKYO",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E5%82%99%E5%89%8D%E7%84%BC%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%83%BC%E5%A4%A2%E5%B9%BB%E5%BA%B5%E9%8A%80%E5%BA%A7%E5%BA%97%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%926%E2%88%9210%20%E3%83%9F%E3%83%A4%E3%82%B3%E3%83%93%E3%83%AB%20%EF%BC%92F%20Ginza5-6-10%20MIYAKO%20Buildg.%20Chuo-ku%2C%20TOKYO&query_place_id=ChIJq0AZG-2LGGARSvZXcQo-x5c",
+      "startTime": "2027-02-04T14:25",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Ginza Itoya — stationery flagship",
+      "category": "shopping",
+      "address": "2 Chome-7-15 Ginza, Chuo City, Tokyo 104-0061, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Itoya%2C%202%20Chome-7-15%20Ginza%2C%20Chuo%20City%2C%20Tokyo%20104-0061%2C%20Japan&query_place_id=ChIJKQAKAOSLGGARwGhpOXWgfYo",
+      "startTime": "2027-02-04T15:15",
+      "durationMinutes": 20,
+      "alternatives": [
+        {
+          "name": "HIGASHIYA Ginza",
+          "category": "",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 1 Chome−7−7 ポーラ銀座ビル 2階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=HIGASHIYA%20GINZA%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%201%20Chome%E2%88%927%E2%88%927%20%E3%83%9D%E3%83%BC%E3%83%A9%E9%8A%80%E5%BA%A7%E3%83%93%E3%83%AB%202%E9%9A%8E&query_place_id=ChIJM7rZi-OLGGARhHjf2ggZHAQ"
+        },
+        {
+          "name": "HARBS Lumine Yurakucho",
+          "category": "food",
+          "address": "Japan, 〒100-0006 Tokyo, Chiyoda City, Yurakucho, 2 Chome−5−1 ルミネ有楽町店 ルミネ1 二階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=HARBS%20LUMINE%20Yurakucho%2C%20Japan%2C%20%E3%80%92100-0006%20Tokyo%2C%20Chiyoda%20City%2C%20Yurakucho%2C%202%20Chome%E2%88%925%E2%88%921%20%E3%83%AB%E3%83%9F%E3%83%8D%E6%9C%89%E6%A5%BD%E7%94%BA%E5%BA%97%20%E3%83%AB%E3%83%9F%E3%83%8D1%20%E4%BA%8C%E9%9A%8E&query_place_id=ChIJ8yCSe-WLGGARAR2zuO1ArSY"
+        },
+        {
+          "name": "Ginza Tsuboyakiimo",
+          "category": "food",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 7 Chome−6−4 GINZA7BLDG 1階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Tsuboyaki-imo%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%207%20Chome%E2%88%926%E2%88%924%20GINZA7BLDG%201%E9%9A%8E&query_place_id=ChIJF19JGTyLGGARFwwVTCJksP8"
+        }
+      ]
+    },
+    {
+      "name": "Kaban Kobo Yamamoto Ginza — leather randoseru",
+      "category": "shopping",
+      "address": "Albore Ginza B1F, 2-4-18 Ginza, Chuo City, Tokyo 104-0061, Japan",
+      "googleMapsUrl": "https://maps.app.goo.gl/nn976JtkrDBVfJwF7",
+      "startTime": "2027-02-04T15:35",
+      "durationMinutes": 25,
+      "alternatives": []
+    },
+    {
+      "name": "teamLab Borderless Azabudai Hills",
+      "category": "activity",
+      "address": "Japan, 〒106-0041 Tokyo, Minato City, Toranomon, 5 Chome−９ Azabudai Hills Garden Plaza B, B1",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=teamLab%20Borderless%3A%20MORI%20Building%20DIGITAL%20ART%20MUSEUM%2C%20Japan%2C%20%E3%80%92106-0041%20Tokyo%2C%20Minato%20City%2C%20Toranomon%2C%205%20Chome%E2%88%92%EF%BC%99%20Azabudai%20Hills%20Garden%20Plaza%20B%2C%20B1&query_place_id=ChIJQ5Sa1PqJGGARUSaNKKOrMVg",
+      "startTime": "2027-02-04T16:30",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Shibakoen + Children’s Peace Tower",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Shibakoen%20%2B%20Children%E2%80%99s%20Peace%20Tower%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-04T18:45",
+      "durationMinutes": 20,
+      "alternatives": []
+    },
+    {
+      "name": "Ginza Katsukami — tonkatsu tasting course",
+      "category": "restaurant",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−6−10 銀座ミヤコビル ５階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Katsukami%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%926%E2%88%9210%20%E9%8A%80%E5%BA%A7%E3%83%9F%E3%83%A4%E3%82%B3%E3%83%93%E3%83%AB%20%EF%BC%95%E9%9A%8E&query_place_id=ChIJkdPHpPyLGGARSrdppLJwIPU",
+      "startTime": "2027-02-04T20:00",
+      "durationMinutes": 120,
+      "alternatives": [
+        {
+          "name": "Yakiniku Kappo Note / Azabu Note",
+          "category": "food",
+          "address": "2 Chome-9-5 Azabujuban, Minato City, Tokyo 106-0045, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yakiniku%20Kappo%20no%20Oto%2C%202%20Chome-9-5%20Azabujuban%2C%20Minato%20City%2C%20Tokyo%20106-0045%2C%20Japan&query_place_id=ChIJLaZ-H1CLGGARDWuOinQuVfE"
+        },
+        {
+          "name": "Ginza Ishizaki",
+          "category": "food",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 8 Chome−7−2 Horikoshi. Bldg, ４階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Ishizaki%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%208%20Chome%E2%88%927%E2%88%922%20Horikoshi.%20Bldg%2C%20%EF%BC%94%E9%9A%8E&query_place_id=ChIJheKpk-iLGGARy0poXqe9L8w"
+        },
+        {
+          "name": "Kobe Beef Kappo Jigen / 神戸牛割烹 次玄",
+          "category": "food",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 8 Chome−5−18 Sunwood Bld.G, B2",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kobebeef%20Kappo%20Jigen%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%208%20Chome%E2%88%925%E2%88%9218%20Sunwood%20Bld.G%2C%20B2&query_place_id=ChIJ6V2s5o6LGGARKoIPj4lIQe0"
+        },
+        {
+          "name": "L’appartamento di NAOKI",
+          "category": "restaurant",
+          "address": "Japan, 〒103-0013 Tokyo, Chuo City, Nihonbashiningyocho, 2 Chome−10−11 KYOE PLAZA 4F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=L%27appartamento%20di%20NAOKI%2C%20Japan%2C%20%E3%80%92103-0013%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashiningyocho%2C%202%20Chome%E2%88%9210%E2%88%9211%20KYOE%20PLAZA%204F&query_place_id=ChIJG9CMoqGLGGARdbKCERc1eTQ"
+        },
+        {
+          "name": "Yakiniku Jumbo Hanare",
+          "category": "restaurant",
+          "address": "3 Chome-27-9 Hongo, Bunkyo City, Tokyo 113-0033, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jambo%20Hanare%2C%203%20Chome-27-9%20Hongo%2C%20Bunkyo%20City%2C%20Tokyo%20113-0033%2C%20Japan&query_place_id=ChIJQZqLszyMGGAR_0fPsHLwL_Q"
+        },
+        {
+          "name": "Sushi Ishiyama (鮨 いしやま)",
+          "category": "restaurant",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−3−6 森田ビル 4F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Ishiyama%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%923%E2%88%926%20%E6%A3%AE%E7%94%B0%E3%83%93%E3%83%AB%204F&query_place_id=ChIJje_QwB-LGGAR6YoBHRKUQHk"
+        }
+      ]
+    },
+    {
+      "name": "Bar High Five",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−4−15 Efflore Ginza5 Bldg, B1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High%20Five%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%924%E2%88%9215%20Efflore%20Ginza5%20Bldg%2C%20B1F&query_place_id=ChIJvbSR2e6LGGAR4Ihq9U2CsXQ",
+      "startTime": "2027-02-04T22:45",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "Breakfast / coffee before Asakusa",
+      "category": "food",
+      "address": "Asakusa, Taito City, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-05T08:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Senso-ji",
+      "category": "activity",
+      "address": "2 Chome-3-1 Asakusa, Taito City, Tokyo 111-0032, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sens%C5%8D-ji%2C%202%20Chome-3-1%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJ8T1GpMGOGGARDYGSgpooDWw",
+      "startTime": "2027-02-05T09:30",
+      "durationMinutes": 75,
+      "alternatives": []
+    },
+    {
+      "name": "Tokyo Curry Pan — Asakusa Kaminarimon",
+      "category": "food",
+      "address": "1 Chome-20-4 Asakusa, Taito City, Tokyo 111-0032, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Curry%20Pan%2C%201%20Chome-20-4%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJ-bpFMjyPGGARJmWLkj9sUXA",
+      "startTime": "2027-02-05T10:45",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Asakusa matcha / tea stop: Suzukien or Maruzen Tea Roastery",
+      "category": "",
+      "address": "Asakusa, Taito City, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-05T11:25",
+      "durationMinutes": 25,
+      "alternatives": [
+        {
+          "name": "Suzukien Asakusa matcha gelato",
+          "category": "",
+          "address": "3 Chome-4-3 Asakusa, Taito City, Tokyo 111-0032, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Suzukien%20Asakusa%20matcha%20gelato%2C%203%20Chome-4-3%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJidgn3MGOGGARVSZF3Mq9vho"
+        },
+        {
+          "name": "MARUZEN Tea Roastery",
+          "category": "",
+          "address": "1 Chome-36-2 Asakusa, Taito City, Tokyo 111-0032, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=MARUZEN%20Tea%20Roastery%2C%201%20Chome-36-2%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJWxZMD7-PGGARoNOeukwu1yA"
+        }
+      ]
+    },
+    {
+      "name": "Lunch: Asakusa / Kappabashi",
+      "category": "food",
+      "address": "Asakusa / Kappabashi, Taito City, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-05T11:45",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "LaVASARA Bettei",
+      "category": "food",
+      "address": "2 Chome-2-13 Asakusa, Taito City, Tokyo 111-0032, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LaVASARA%20CAFE%20%26%20GRILL%2C%202%20Chome-2-13%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJMTcoRsGOGGARvrSTuPYk49A",
+      "startTime": "2027-02-05T11:45",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "KAMA-ASA — kitchen scissors",
+      "category": "shopping",
+      "address": "2 Chome-24-1 Matsugaya, Taito City, Tokyo 111-0036, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kama-Asa&query_place_id=ChIJExS-5JWOGGAR517q04djH-4",
+      "startTime": "2027-02-05T13:00",
+      "durationMinutes": 30,
+      "alternatives": []
+    },
+    {
+      "name": "Tokyo Biken",
+      "category": "shopping",
+      "address": "1 Chome-5-15 Nishiasakusa, Taito City, Tokyo 111-0035, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Biken%2C%201%20Chome-5-15%20Nishiasakusa%2C%20Taito%20City%2C%20Tokyo%20111-0035%2C%20Japan&query_place_id=ChIJN-I1cb6OGGARW3oZmJ-wxlM",
+      "startTime": "2027-02-05T13:30",
+      "durationMinutes": 60,
+      "alternatives": [
+        {
+          "name": "Ganso Shokuhin Sample-ya Kappabashi",
+          "category": "shopping",
+          "address": "3 Chome-7-6 Nishiasakusa, Taito City, Tokyo 111-0035, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ganso%20Food%20Sample%20Shop%20Kappabashi%20Showroom%2C%203%20Chome-7-6%20Nishiasakusa%2C%20Taito%20City%2C%20Tokyo%20111-0035%2C%20Japan&query_place_id=ChIJXfrPw5WOGGARtaWpQ0neL7U"
+        },
+        {
+          "name": "Sato Sample",
+          "category": "shopping",
+          "address": "Japan, 〒111-0036 Tokyo, Taito City, Matsugaya, 3 Chome−1−14 坂東ビル 1階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sato%20Sample%2C%20Japan%2C%20%E3%80%92111-0036%20Tokyo%2C%20Taito%20City%2C%20Matsugaya%2C%203%20Chome%E2%88%921%E2%88%9214%20%E5%9D%82%E6%9D%B1%E3%83%93%E3%83%AB%201%E9%9A%8E&query_place_id=ChIJawxQe_CPGGARuD8NQPlkLm8"
+        }
+      ]
+    },
+    {
+      "name": "Uogashi Nihon-Ichi — Atré Akihabara standing sushi",
+      "category": "food",
+      "address": "1 Chome-17-6 Sotokanda, Chiyoda City, Tokyo 101-0021, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Uogashi%20Nihonichi%2C%201%20Chome-17-6%20Sotokanda%2C%20Chiyoda%20City%2C%20Tokyo%20101-0021%2C%20Japan&query_place_id=ChIJbwVn96eOGGARkXzSrjKfZOU",
+      "startTime": "2027-02-05T15:00",
+      "durationMinutes": 25,
+      "alternatives": []
+    },
+    {
+      "name": "Dobondobondo no Theme — Akihabara",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dobondobondo%20no%20Theme%20%E2%80%94%20Akihabara%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-05T15:25",
+      "durationMinutes": 10,
+      "alternatives": []
+    },
+    {
+      "name": "Akihabara Electric Town",
+      "category": "activity",
+      "address": "1 Chome-12 Sotokanda, Chiyoda City, Tokyo 101-0021, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Akihabara%20Electric%20Town%2C%201%20Chome-12%20Sotokanda%2C%20Chiyoda%20City%2C%20Tokyo%20101-0021%2C%20Japan&query_place_id=ChIJZzSYoB2MGGARfBcicn7sx28",
+      "startTime": "2027-02-05T15:35",
+      "durationMinutes": 115,
+      "alternatives": []
+    },
+    {
+      "name": "Akihabara tonkatsu Japanese curry dinner / arcades buffer",
+      "category": "food",
+      "address": "Akihabara, Chiyoda City, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-05T17:45",
+      "durationMinutes": 90,
+      "alternatives": [
+        {
+          "name": "Akihabara Menya Musashi Bujin",
+          "category": "restaurant",
+          "address": "Japan, 〒101-0025 Tokyo, Chiyoda City, Kanda Sakumacho, 2 Chome−18−5 Arc Building, 1F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Akihabara%20Menya%20Musashi%20Bujin%2C%20Japan%2C%20%E3%80%92101-0025%20Tokyo%2C%20Chiyoda%20City%2C%20Kanda%20Sakumacho%2C%202%20Chome%E2%88%9218%E2%88%925%20Arc%20Building%2C%201F&query_place_id=ChIJd9RJhKiOGGAR_UJ21Xk9UVU"
+        },
+        {
+          "name": "Hinoya Curry — Akihabara",
+          "category": "restaurant",
+          "address": "Japan, 〒101-0021 Tokyo, Chiyoda City, Sotokanda, 1 Chome−8−11 日宝アキバスタービル １階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hinoya%20Curry%20Akihabara%2C%20Japan%2C%20%E3%80%92101-0021%20Tokyo%2C%20Chiyoda%20City%2C%20Sotokanda%2C%201%20Chome%E2%88%928%E2%88%9211%20%E6%97%A5%E5%AE%9D%E3%82%A2%E3%82%AD%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%93%E3%83%AB%20%EF%BC%91%E9%9A%8E&query_place_id=ChIJOU8cAB2MGGARb9Qm5YEtfPY"
+        },
+        {
+          "name": "Kyushu Jangara — Akihabara",
+          "category": "restaurant",
+          "address": "Japan, 〒101-0021 Tokyo, Chiyoda City, Sotokanda, 3 Chome−11−6 一枝ビル １Ｆ",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kyushu%20Jangara%20Akihabara%2C%20Japan%2C%20%E3%80%92101-0021%20Tokyo%2C%20Chiyoda%20City%2C%20Sotokanda%2C%203%20Chome%E2%88%9211%E2%88%926%20%E4%B8%80%E6%9E%9D%E3%83%93%E3%83%AB%20%EF%BC%91%EF%BC%A6&query_place_id=ChIJ99Gizh2MGGARuDpsme65T9s"
+        },
+        {
+          "name": "Kushigin Akihabara / 串吟 秋葉原店 — optional",
+          "category": "food",
+          "address": "1-8-4 Kanda Sakumacho, Chiyoda City, Tokyo 101-0025, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B2%E5%90%9F%20%E7%A7%8B%E8%91%89%E5%8E%9F%E5%BA%97%2C%201-8-4%20Kanda%20Sakumacho%2C%20Chiyoda%20City%2C%20Tokyo%20101-0025%2C%20Japan"
+        }
+      ]
+    },
+    {
+      "name": "Underground idol concert target (TBD)",
+      "category": "concert",
+      "address": "Akihabara / Tokyo idol live houses, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-05T19:30",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Slow breakfast near hotel before Mito day trip",
+      "category": "food",
+      "address": "Tokyo Station / Nihonbashi / Ginza, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T07:00",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Morning train Tokyo → Mito",
+      "category": "transport",
+      "address": "Tokyo Station / JR limited express toward Mito",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T08:00",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Kairakuen Garden / 偕楽園",
+      "category": "activity",
+      "address": "1 Chome-3-3 Tokiwacho, Mito, Ibaraki 310-0033, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kairakuen%2C%201%20Chome-3-3%20Tokiwacho%2C%20Mito%2C%20Ibaraki%20310-0033%2C%20Japan&query_place_id=ChIJt43VZ0IkImARkblBKJUzdh0",
+      "startTime": "2027-02-06T10:15",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Mito lunch near station / Kairakuen",
+      "category": "food",
+      "address": "Mito Station / Kairakuen area, Mito, Ibaraki",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T12:45",
+      "durationMinutes": 75,
+      "alternatives": []
+    },
+    {
+      "name": "Mito station / lockers / venue-area buffer",
+      "category": "activity",
+      "address": "Mito Station / central Mito, Ibaraki",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T14:15",
+      "durationMinutes": 90,
+      "alternatives": []
+    },
+    {
+      "name": "Mito pre-show food / snack",
+      "category": "food",
+      "address": "Near Mito LIGHT HOUSE, Mito, Ibaraki",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T15:45",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Mito LIGHT HOUSE",
+      "category": "concert",
+      "address": "3 Chome-3-28 Minamimachi, Mito, Ibaraki 310-0021, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LIGHT%20HOUSE%2C%203%20Chome-3-28%20Minamimachi%2C%20Mito%2C%20Ibaraki%20310-0021%2C%20Japan&query_place_id=ChIJEfVi-FEkImARYaQBoKgEerU",
+      "startTime": "2027-02-06T17:00",
+      "durationMinutes": 210,
+      "alternatives": []
+    },
+    {
+      "name": "Return train Mito → Tokyo",
+      "category": "transport",
+      "address": "Mito Station / JR limited express back to Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T21:00",
+      "durationMinutes": 120,
+      "alternatives": []
+    },
+    {
+      "name": "Post-concert late snack / decompression",
+      "category": "food",
+      "address": "Tokyo Station / hotel area",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-06T23:15",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Meiji Jingu morning",
+      "category": "activity",
+      "address": "1-1 Yoyogikamizonocho, Shibuya, Tokyo 151-8557, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Meiji%20Jingu%2C%201-1%20Yoyogikamizonocho%2C%20Shibuya%2C%20Tokyo%20151-8557%2C%20Japan&query_place_id=ChIJ5SZMmreMGGARcz8QSTiJyo8",
+      "startTime": "2027-02-07T09:15",
+      "durationMinutes": 90,
+      "alternatives": []
+    },
+    {
+      "name": "First Arrows Tokyo / Harajuku",
+      "category": "activity",
+      "address": "4 Chome-31-4 Jingumae, Shibuya, Tokyo 150-0001, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=FIRST%20ARROW%27S%2C%204%20Chome-31-4%20Jingumae%2C%20Shibuya%2C%20Tokyo%20150-0001%2C%20Japan&query_place_id=ChIJ270_f6SMGGAR4AbAdRbcXBU",
+      "startTime": "2027-02-07T11:15",
+      "durationMinutes": 75,
+      "alternatives": []
+    },
+    {
+      "name": "Omotesando coffee / tea stop: Koffee Mameya or CHAVATY",
+      "category": "",
+      "address": "Omotesando / Jingumae, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-07T12:25",
+      "durationMinutes": 20,
+      "alternatives": [
+        {
+          "name": "KOFFEE MAMEYA",
+          "category": "",
+          "address": "4 Chome-15-3 Jingumae, Shibuya, Tokyo 150-0001, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KOFFEE%20MAMEYA%2C%204%20Chome-15-3%20Jingumae%2C%20Shibuya%2C%20Tokyo%20150-0001%2C%20Japan&query_place_id=ChIJB1oleKOMGGAR_10GNeoySkY"
+        },
+        {
+          "name": "CHAVATY Omotesando",
+          "category": "",
+          "address": "Japan, 〒150-0001 Tokyo, Shibuya, Jingumae, 4 Chome−6−9 南原宿ビル １階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=CHAVATY%20Omotesando%2C%20Japan%2C%20%E3%80%92150-0001%20Tokyo%2C%20Shibuya%2C%20Jingumae%2C%204%20Chome%E2%88%926%E2%88%929%20%E5%8D%97%E5%8E%9F%E5%AE%BF%E3%83%93%E3%83%AB%20%EF%BC%91%E9%9A%8E&query_place_id=ChIJZ8U4SciNGGAR_ubaufBvGvk"
+        }
+      ]
+    },
+    {
+      "name": "AFURI Harajuku",
+      "category": "food",
+      "address": "Japan, 〒151-0051 Tokyo, Shibuya, Sendagaya, 3 Chome−63−1 グランデフォレスタ原宿 1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=AFURI%20Harajuku%2C%20Japan%2C%20%E3%80%92151-0051%20Tokyo%2C%20Shibuya%2C%20Sendagaya%2C%203%20Chome%E2%88%9263%E2%88%921%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%82%BF%E5%8E%9F%E5%AE%BF%201F&query_place_id=ChIJba17TbqMGGARFtDV6hkZbcs",
+      "startTime": "2027-02-07T12:45",
+      "durationMinutes": 75,
+      "alternatives": [
+        {
+          "name": "Kaiten Sushi Ginza Onodera HONTEN — Omotesando",
+          "category": "restaurant",
+          "address": "5-1-6 Jingumae, Il Palazzino Omotesando 1F, Shibuya-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kaiten%20Sushi%20Ginza%20Onodera%20HONTEN%20%E2%80%94%20Omotesando&query_place_id=ChIJyZOxItGNGGARWwp9_I4dZDA"
+        }
+      ]
+    },
+    {
+      "name": "Micasadeco & Cafe Jingumae",
+      "category": "food",
+      "address": "Japan, 〒150-0001 Tokyo, Shibuya, Jingumae, 6 Chome−13−2 １Ｆ",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Micasadeco%20%26%20Cafe%20Jingumae%2C%20Japan%2C%20%E3%80%92150-0001%20Tokyo%2C%20Shibuya%2C%20Jingumae%2C%206%20Chome%E2%88%9213%E2%88%922%20%EF%BC%91%EF%BC%A6&query_place_id=ChIJDf7Vf6aMGGARzNimzxLN2ds",
+      "startTime": "2027-02-07T14:35",
+      "durationMinutes": 50,
+      "alternatives": [
+        {
+          "name": "HIGUMA Doughnuts × Coffee Wrights Omotesando",
+          "category": "cafe",
+          "address": "4-9-13 Jingumae, Minagawa Village #5, Shibuya-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=HIGUMA%20Doughnuts%20%C3%97%20Coffee%20Wrights%20Omotesando&query_place_id=ChIJB4nX_beNGGARcvfg36ImbP8"
+        }
+      ]
+    },
+    {
+      "name": "Iyoshi Cola — Shibuya Jingumae",
+      "category": "cafe",
+      "address": "Japan, 〒150-0001 Tokyo, Shibuya, Jingumae, 5 Chome−29−12 武居ビル",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Iyoshi%20Cola%2C%20Japan%2C%20%E3%80%92150-0001%20Tokyo%2C%20Shibuya%2C%20Jingumae%2C%205%20Chome%E2%88%9229%E2%88%9212%20%E6%AD%A6%E5%B1%85%E3%83%93%E3%83%AB&query_place_id=ChIJeSAL1WSNGGARRQOPnwYlYPo",
+      "startTime": "2027-02-07T15:30",
+      "durationMinutes": 20,
+      "alternatives": []
+    },
+    {
+      "name": "Harajuku / Omotesando / Shibuya browse",
+      "category": "activity",
+      "address": "Harajuku / Omotesando / Shibuya, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-07T15:50",
+      "durationMinutes": 25,
+      "alternatives": []
+    },
+    {
+      "name": "Nintendo TOKYO at Shibuya PARCO",
+      "category": "shopping",
+      "address": "Japan, 〒150-0042 Tokyo, Shibuya, Udagawacho, 15−1 渋谷PARCO 6F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo%20Tokyo%20Shibuya%20Japan%2C%20Japan%2C%20%E3%80%92150-0042%20Tokyo%2C%20Shibuya%2C%20Udagawacho%2C%2015%E2%88%921%20%E6%B8%8B%E8%B0%B7PARCO%206F&query_place_id=ChIJ7Su1FK6NGGARAr7UK5NjmMo",
+      "startTime": "2027-02-07T16:20",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "Take Me Out — Limited Edition A / Pia",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Take%20Me%20Out%20%E2%80%94%20Limited%20Edition%20A%20%2F%20Pia%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-07T17:25",
+      "durationMinutes": 5,
+      "alternatives": []
+    },
+    {
+      "name": "Take Me Out — Limited Edition B",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Take%20Me%20Out%20%E2%80%94%20Limited%20Edition%20B%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-07T17:35",
+      "durationMinutes": 5,
+      "alternatives": []
+    },
+    {
+      "name": "Take Me Out — Regular Edition",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Take%20Me%20Out%20%E2%80%94%20Regular%20Edition%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-07T17:45",
+      "durationMinutes": 5,
+      "alternatives": []
+    },
+    {
+      "name": "Departure — HARUNA",
+      "category": "activity",
+      "address": "Tokyo, Japan — exact fan-map photo pin",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Departure%20%E2%80%94%20HARUNA%2C%20Tokyo%2C%20Japan%20%E2%80%94%20exact%20fan-map%20photo%20pin",
+      "startTime": "2027-02-07T18:05",
+      "durationMinutes": 5,
+      "alternatives": []
+    },
+    {
+      "name": "Shibuya dinner / izakaya flex",
+      "category": "food",
+      "address": "Shibuya, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-07T18:30",
+      "durationMinutes": 90,
+      "alternatives": [
+        {
+          "name": "Yakitori Sei",
+          "category": "restaurant",
+          "address": "7 Arakicho, Shinjuku City, Tokyo 160-0007, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yakitori%20Sei%2C%207%20Arakicho%2C%20Shinjuku%20City%2C%20Tokyo%20160-0007%2C%20Japan&query_place_id=ChIJy0F1EK-7JhURwrujSgOCWIE"
+        }
+      ]
+    },
+    {
+      "name": "Final-night bar tour placeholder",
+      "category": "food",
+      "address": "Shinjuku / Golden Gai / Omoide Yokocho area, Tokyo",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-07T20:30",
+      "durationMinutes": 150,
+      "alternatives": []
+    },
+    {
+      "name": "Post-concert late snack / decompression",
+      "category": "food",
+      "address": "Tokyo Station / hotel area",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-07T23:15",
+      "durationMinutes": 35,
+      "alternatives": [
+        {
+          "name": "Ichigaku — Chicken Tonkotsu (鶏豚骨 一學)",
+          "category": "restaurant",
+          "address": "3 Chome-9 Yotsuya, Shinjuku City, Tokyo 160-0004, Japan",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ichigaku%20-%20Chicken%20Tonkotsu%2C%203%20Chome-9%20Yotsuya%2C%20Shinjuku%20City%2C%20Tokyo%20160-0004%2C%20Japan&query_place_id=ChIJhaFTDu2MGGARVaHgQg_ckQ8"
+        },
+        {
+          "name": "Ramen Nagi — Shinjuku Golden Gai main store",
+          "category": "food",
+          "address": "Japan, 〒160-0021 Tokyo, Shinjuku City, Kabukicho, 1 Chome−1−10 2階",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sugoi%20Niboshi%20Ramen%20Nagi%20Shinjuku%20Goldengai%20Honkan%2C%20Japan%2C%20%E3%80%92160-0021%20Tokyo%2C%20Shinjuku%20City%2C%20Kabukicho%2C%201%20Chome%E2%88%921%E2%88%9210%202%E9%9A%8E&query_place_id=ChIJAxKeZNmMGGARQ4EOGHqSdIg"
+        }
+      ]
+    },
+    {
+      "name": "Breakfast near Mitsui Garden Hotel Nihonbashi Premier",
+      "category": "food",
+      "address": "4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-08T08:00",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Hotel → Ueno transfer",
+      "category": "transport",
+      "address": "Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hotel%20%E2%86%92%20Ueno%20transfer%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-08T09:00",
+      "durationMinutes": 30,
+      "alternatives": []
+    },
+    {
+      "name": "Ueno Toshogu Peony Garden",
+      "category": "activity",
+      "address": "9-88 Uenokoen, Taito City, Tokyo 110-0007, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ueno%20Toshogu%20Shrine%20Peony%20Garden%2C%209-88%20Uenokoen%2C%20Taito%20City%2C%20Tokyo%20110-0007%2C%20Japan&query_place_id=ChIJAQC06SeMGGAR1OplI5VNONo",
+      "startTime": "2027-02-08T09:30",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "Ueno → hotel return",
+      "category": "transport",
+      "address": "Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ueno%20%E2%86%92%20hotel%20return%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-08T10:30",
+      "durationMinutes": 45,
+      "alternatives": []
+    },
+    {
+      "name": "Mitsui Garden Hotel Nihonbashi Premier",
+      "category": "accommodation",
+      "address": "Japan, 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 3 Chome−4−4 三井ガーデンホテル日本橋プレミア 9階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mitsui%20Garden%20Hotel%20Nihonbashi%20Premier%2C%20Japan%2C%20%E3%80%92103-0022%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashimuromachi%2C%203%20Chome%E2%88%924%E2%88%924%20%E4%B8%89%E4%BA%95%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%9B%E3%83%86%E3%83%AB%E6%97%A5%E6%9C%AC%E6%A9%8B%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%209%E9%9A%8E&query_place_id=ChIJ_6CJUFWJGGARv8kNhNPwtJk",
+      "startTime": "2027-02-08T11:15",
+      "durationMinutes": 30,
+      "alternatives": []
+    },
+    {
+      "name": "Departure-day lunch near Nihonbashi / Tokyo Station",
+      "category": "food",
+      "address": "Tokyo Station / airport transit",
+      "googleMapsUrl": null,
+      "startTime": "2027-02-08T12:00",
+      "durationMinutes": 60,
+      "alternatives": []
+    },
+    {
+      "name": "Mitsui Garden Hotel Nihonbashi Premier",
+      "category": "accommodation",
+      "address": "Japan, 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 3 Chome−4−4 三井ガーデンホテル日本橋プレミア 9階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mitsui%20Garden%20Hotel%20Nihonbashi%20Premier%2C%20Japan%2C%20%E3%80%92103-0022%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashimuromachi%2C%203%20Chome%E2%88%924%E2%88%924%20%E4%B8%89%E4%BA%95%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%83%9B%E3%83%86%E3%83%AB%E6%97%A5%E6%9C%AC%E6%A9%8B%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%209%E9%9A%8E&query_place_id=ChIJ_6CJUFWJGGARv8kNhNPwtJk",
+      "startTime": "2027-02-08T13:30",
+      "durationMinutes": 30,
+      "alternatives": []
+    },
+    {
+      "name": "Hotel → Haneda airport transfer",
+      "category": "transport",
+      "address": "Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hotel%20%E2%86%92%20Haneda%20airport%20transfer%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-08T14:00",
+      "durationMinutes": 80,
+      "alternatives": []
+    },
+    {
+      "name": "Tokyo Haneda Airport (HND)",
+      "category": "transport",
+      "address": "Haneda Airport, Ota City, Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20Airport%20%28HND%29%2C%20Haneda%20Airport%2C%20Ota%20City%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-08T15:20",
+      "durationMinutes": 180,
+      "alternatives": []
+    },
+    {
+      "name": "Tokyo Haneda Airport (HND)",
+      "category": "transport",
+      "address": "Haneda Airport, Ota City, Tokyo, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20Airport%20%28HND%29%2C%20Haneda%20Airport%2C%20Ota%20City%2C%20Tokyo%2C%20Japan",
+      "startTime": "2027-02-08T18:20",
+      "durationMinutes": 0,
+      "alternatives": []
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Breakfast before flight / ORD",
+      "category": "food",
+      "address": "Chicago O'Hare / before airport",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Lunch / airport meal before long-haul flight",
+      "category": "food",
+      "address": "Chicago O'Hare / in transit",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "In-flight / arrival breakfast",
+      "category": "food",
+      "address": "In transit to Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "In-flight / arrival-day lunch",
+      "category": "food",
+      "address": "In transit to Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Nichinichi Shinjuku (日日 新宿本店)",
+      "category": "food",
+      "address": "Eguchi Building 1F, 2-39-6 Kabukicho, Shinjuku City, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nichinichi+Shinjuku&query_place_id=ChIJD-E8-CeNGGARHIHmWqFpKic"
+    },
+    {
+      "name": "Osteria IL VIAGGIO",
+      "category": "food",
+      "address": "GranRoof 2F, Gransta Yaesu, 1-9-1 Marunouchi, Chiyoda City, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Osteria%20IL%20VIAGGIO%2C%20GranRoof%202F%2C%20Gransta%20Yaesu%2C%201-9-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo"
+    },
+    {
+      "name": "AWkitchen TOKYO — Shin-Marunouchi Building",
+      "category": "food",
+      "address": "Shin-Marunouchi Building 5F, 1-5-1 Marunouchi, Chiyoda City, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=AWkitchen%20TOKYO%20%E2%80%94%20Shin-Marunouchi%20Building%2C%20Shin-Marunouchi%20Building%205F%2C%201-5-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo"
+    },
+    {
+      "name": "Fuunji Shinjuku",
+      "category": "restaurant",
+      "address": "2-14-3 Yoyogi, Hokuto Daiichi Building 1F, Shibuya-ku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fuunji%20Shinjuku&query_place_id=ChIJ508frs-MGGARnIKrb_tkai0"
+    },
+    {
+      "name": "PERFECT BEER KITCHEN Nishi-Shinjuku",
+      "category": "food",
+      "address": "7-15-8 Nishi-Shinjuku, 1F 101, Shinjuku City, Tokyo 160-0023",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=PERFECT%20BEER%20KITCHEN%20Nishi-Shinjuku%2C%207-15-8%20Nishi-Shinjuku%2C%201F%20101%2C%20Shinjuku%20City%2C%20Tokyo%20160-0023&query_place_id=ChIJrZdO5ECNGGARLROc-y0tkoQ"
+    },
+    {
+      "name": "Sakaba Sinatra Tokyo / 酒場シナトラ 東京店",
+      "category": "food",
+      "address": "Tokyo Station Ichibangai 2F, Tokyo Gourmet Zone, 1-9-1 Marunouchi, Chiyoda City, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sakaba%20Sinatra%20Tokyo%2C%20Tokyo%20Station%20Ichibangai%202F%2C%20Tokyo%20Gourmet%20Zone%2C%201-9-1%20Marunouchi%2C%20Chiyoda%20City%2C%20Tokyo&query_place_id=ChIJ-8s8zDKLGGARXyxpPsdLOzE"
+    },
+    {
+      "name": "bar plastic model",
+      "category": "food",
+      "address": "1-1-10 Kabukicho, Shinjuku City, Tokyo 160-0021",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=bar+plastic+model&query_place_id=ChIJXXuZ90CNGGARH2fYWzaWfRU"
+    },
+    {
+      "name": "Albatross G",
+      "category": "food",
+      "address": "1-1-7 Kabukicho, Golden Gai 5th Street, Shinjuku City, Tokyo 160-0021",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albatross+G&query_place_id=ChIJa6nPcdmMGGARgAHVyVca7aI"
+    },
+    {
+      "name": "The Open Book",
+      "category": "food",
+      "address": "1-1-6 Kabukicho, Golden Gai 5th Street, Shinjuku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Open+Book&query_place_id=ChIJCb60cAWNGGARSeDfR-PVhWY"
+    },
+    {
+      "name": "TOTO Bar — marked permanently closed",
+      "category": "food",
+      "address": "1-1-8 Kabukicho, Akarui Hanazono 1st Street 2F, Shinjuku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TOTO+Bar&query_place_id=ChIJbaJpBACNGGARHDoFEARPEAU"
+    },
+    {
+      "name": "Maguroya Kurogin · Tsukiji Honten",
+      "category": "food",
+      "address": "4 Chome-10-12 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Maguroya%20Kurogin%2C%204%20Chome-10-12%20Tsukiji%2C%20Chuo%20City%2C%20Tokyo%20104-0045%2C%20Japan&query_place_id=ChIJsQIg2t6LGGAR8w_OrbyqA3U"
+    },
+    {
+      "name": "SeaGen 海玄 — another-day candidate only",
+      "category": "restaurant",
+      "address": "4-13-8 Tsukiji, Solasia Building 1F, Chuo-ku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SeaGen%20%E6%B5%B7%E7%8E%84%20%E2%80%94%20another-day%20candidate%20only&query_place_id=ChIJ1x_6sReLGGARAzSUSIFloxs"
+    },
+    {
+      "name": "Tsukiji Yamacho",
+      "category": "food",
+      "address": "4 Chome-10-10 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tsukiji+Yamacho&query_place_id=ChIJpYBA196LGGARHJnwxaxGNKg"
+    },
+    {
+      "name": "Yonemoto Coffee Honten",
+      "category": "cafe",
+      "address": "4 Chome-11-1 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yonemoto+Coffee+Head+Shop&query_place_id=ChIJoylsI9-LGGAREulpP6iK2yY"
+    },
+    {
+      "name": "Kaki Goya Tsukiji Shokudo",
+      "category": "food",
+      "address": "Japan, 〒104-0045 Tokyo, Chuo City, Tsukiji, 4 Chome−10−14 丸禎ビル1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kakigoya%2C%20Japan%2C%20%E3%80%92104-0045%20Tokyo%2C%20Chuo%20City%2C%20Tsukiji%2C%204%20Chome%E2%88%9210%E2%88%9214%20%E4%B8%B8%E7%A6%8E%E3%83%93%E3%83%AB1F&query_place_id=ChIJ8c4X2d6LGGARjNJLJz1lAHg"
+    },
+    {
+      "name": "Old Delhi",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−7−10 イグジットメルサ 7F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Old%20Delhi%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%927%E2%88%9210%20%E3%82%A4%E3%82%B0%E3%82%B8%E3%83%83%E3%83%88%E3%83%A1%E3%83%AB%E3%82%B5%207F&query_place_id=ChIJawXVyY-LGGAR3Np3Uh4Pf7Q"
+    },
+    {
+      "name": "Vomero",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−12−8 NKCビル １F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pizzeria%20Trattoria%20Vomero%20Higashi-Ginza%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%9212%E2%88%928%20NKC%E3%83%93%E3%83%AB%20%EF%BC%91F&query_place_id=ChIJrygpw-CLGGARYvoz22ywuao"
+    },
+    {
+      "name": "Gino Sorbillo Artista Pizza Napoletana",
+      "category": "food",
+      "address": "Japan, 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 3 Chome−2−1 コレド室町テラス 1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gino%20Sorbillo%20Artista%20Pizza%20Napoletana%2C%20Japan%2C%20%E3%80%92103-0022%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashimuromachi%2C%203%20Chome%E2%88%922%E2%88%921%20%E3%82%B3%E3%83%AC%E3%83%89%E5%AE%A4%E7%94%BA%E3%83%86%E3%83%A9%E3%82%B9%201F&query_place_id=ChIJdYw1HW-LGGAR1yl64PFEdqs"
+    },
+    {
+      "name": "Tsujita Ginza (つじ田 銀座店)",
+      "category": "food",
+      "address": "Ginza Yamato Building 1F, 3-8-12 Ginza, Chuo City, Tokyo 104-0061",
+      "googleMapsUrl": "https://maps.app.goo.gl/6XFzRZ12CqUaQ6VJ6"
+    },
+    {
+      "name": "HARBS Lumine Yurakucho",
+      "category": "food",
+      "address": "Japan, 〒100-0006 Tokyo, Chiyoda City, Yurakucho, 2 Chome−5−1 ルミネ有楽町店 ルミネ1 二階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=HARBS%20LUMINE%20Yurakucho%2C%20Japan%2C%20%E3%80%92100-0006%20Tokyo%2C%20Chiyoda%20City%2C%20Yurakucho%2C%202%20Chome%E2%88%925%E2%88%921%20%E3%83%AB%E3%83%9F%E3%83%8D%E6%9C%89%E6%A5%BD%E7%94%BA%E5%BA%97%20%E3%83%AB%E3%83%9F%E3%83%8D1%20%E4%BA%8C%E9%9A%8E&query_place_id=ChIJ8yCSe-WLGGARAR2zuO1ArSY"
+    },
+    {
+      "name": "Ginza Tsuboyakiimo",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 7 Chome−6−4 GINZA7BLDG 1階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Tsuboyaki-imo%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%207%20Chome%E2%88%926%E2%88%924%20GINZA7BLDG%201%E9%9A%8E&query_place_id=ChIJF19JGTyLGGARFwwVTCJksP8"
+    },
+    {
+      "name": "Ginza Katsukami — tonkatsu tasting course",
+      "category": "restaurant",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−6−10 銀座ミヤコビル ５階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Katsukami%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%926%E2%88%9210%20%E9%8A%80%E5%BA%A7%E3%83%9F%E3%83%A4%E3%82%B3%E3%83%93%E3%83%AB%20%EF%BC%95%E9%9A%8E&query_place_id=ChIJkdPHpPyLGGARSrdppLJwIPU"
+    },
+    {
+      "name": "Yakiniku Kappo Note / Azabu Note",
+      "category": "food",
+      "address": "2 Chome-9-5 Azabujuban, Minato City, Tokyo 106-0045, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yakiniku%20Kappo%20no%20Oto%2C%202%20Chome-9-5%20Azabujuban%2C%20Minato%20City%2C%20Tokyo%20106-0045%2C%20Japan&query_place_id=ChIJLaZ-H1CLGGARDWuOinQuVfE"
+    },
+    {
+      "name": "Ginza Ishizaki",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 8 Chome−7−2 Horikoshi. Bldg, ４階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Ishizaki%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%208%20Chome%E2%88%927%E2%88%922%20Horikoshi.%20Bldg%2C%20%EF%BC%94%E9%9A%8E&query_place_id=ChIJheKpk-iLGGARy0poXqe9L8w"
+    },
+    {
+      "name": "Kobe Beef Kappo Jigen / 神戸牛割烹 次玄",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 8 Chome−5−18 Sunwood Bld.G, B2",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kobebeef%20Kappo%20Jigen%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%208%20Chome%E2%88%925%E2%88%9218%20Sunwood%20Bld.G%2C%20B2&query_place_id=ChIJ6V2s5o6LGGARKoIPj4lIQe0"
+    },
+    {
+      "name": "L’appartamento di NAOKI",
+      "category": "restaurant",
+      "address": "Japan, 〒103-0013 Tokyo, Chuo City, Nihonbashiningyocho, 2 Chome−10−11 KYOE PLAZA 4F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=L%27appartamento%20di%20NAOKI%2C%20Japan%2C%20%E3%80%92103-0013%20Tokyo%2C%20Chuo%20City%2C%20Nihonbashiningyocho%2C%202%20Chome%E2%88%9210%E2%88%9211%20KYOE%20PLAZA%204F&query_place_id=ChIJG9CMoqGLGGARdbKCERc1eTQ"
+    },
+    {
+      "name": "Yakiniku Jumbo Hanare",
+      "category": "restaurant",
+      "address": "3 Chome-27-9 Hongo, Bunkyo City, Tokyo 113-0033, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jambo%20Hanare%2C%203%20Chome-27-9%20Hongo%2C%20Bunkyo%20City%2C%20Tokyo%20113-0033%2C%20Japan&query_place_id=ChIJQZqLszyMGGAR_0fPsHLwL_Q"
+    },
+    {
+      "name": "Sushi Ishiyama (鮨 いしやま)",
+      "category": "restaurant",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 3 Chome−3−6 森田ビル 4F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sushi%20Ishiyama%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%203%20Chome%E2%88%923%E2%88%926%20%E6%A3%AE%E7%94%B0%E3%83%93%E3%83%AB%204F&query_place_id=ChIJje_QwB-LGGAR6YoBHRKUQHk"
+    },
+    {
+      "name": "Bar High Five",
+      "category": "food",
+      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−4−15 Efflore Ginza5 Bldg, B1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High%20Five%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%924%E2%88%9215%20Efflore%20Ginza5%20Bldg%2C%20B1F&query_place_id=ChIJvbSR2e6LGGAR4Ihq9U2CsXQ"
+    },
+    {
+      "name": "Breakfast / coffee before Asakusa",
+      "category": "food",
+      "address": "Asakusa, Taito City, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Tokyo Curry Pan — Asakusa Kaminarimon",
+      "category": "food",
+      "address": "1 Chome-20-4 Asakusa, Taito City, Tokyo 111-0032, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Curry%20Pan%2C%201%20Chome-20-4%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJ-bpFMjyPGGARJmWLkj9sUXA"
+    },
+    {
+      "name": "Lunch: Asakusa / Kappabashi",
+      "category": "food",
+      "address": "Asakusa / Kappabashi, Taito City, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "LaVASARA Bettei",
+      "category": "food",
+      "address": "2 Chome-2-13 Asakusa, Taito City, Tokyo 111-0032, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LaVASARA%20CAFE%20%26%20GRILL%2C%202%20Chome-2-13%20Asakusa%2C%20Taito%20City%2C%20Tokyo%20111-0032%2C%20Japan&query_place_id=ChIJMTcoRsGOGGARvrSTuPYk49A"
+    },
+    {
+      "name": "Uogashi Nihon-Ichi — Atré Akihabara standing sushi",
+      "category": "food",
+      "address": "1 Chome-17-6 Sotokanda, Chiyoda City, Tokyo 101-0021, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Uogashi%20Nihonichi%2C%201%20Chome-17-6%20Sotokanda%2C%20Chiyoda%20City%2C%20Tokyo%20101-0021%2C%20Japan&query_place_id=ChIJbwVn96eOGGARkXzSrjKfZOU"
+    },
+    {
+      "name": "Akihabara tonkatsu Japanese curry dinner / arcades buffer",
+      "category": "food",
+      "address": "Akihabara, Chiyoda City, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Akihabara Menya Musashi Bujin",
+      "category": "restaurant",
+      "address": "Japan, 〒101-0025 Tokyo, Chiyoda City, Kanda Sakumacho, 2 Chome−18−5 Arc Building, 1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Akihabara%20Menya%20Musashi%20Bujin%2C%20Japan%2C%20%E3%80%92101-0025%20Tokyo%2C%20Chiyoda%20City%2C%20Kanda%20Sakumacho%2C%202%20Chome%E2%88%9218%E2%88%925%20Arc%20Building%2C%201F&query_place_id=ChIJd9RJhKiOGGAR_UJ21Xk9UVU"
+    },
+    {
+      "name": "Hinoya Curry — Akihabara",
+      "category": "restaurant",
+      "address": "Japan, 〒101-0021 Tokyo, Chiyoda City, Sotokanda, 1 Chome−8−11 日宝アキバスタービル １階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hinoya%20Curry%20Akihabara%2C%20Japan%2C%20%E3%80%92101-0021%20Tokyo%2C%20Chiyoda%20City%2C%20Sotokanda%2C%201%20Chome%E2%88%928%E2%88%9211%20%E6%97%A5%E5%AE%9D%E3%82%A2%E3%82%AD%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%93%E3%83%AB%20%EF%BC%91%E9%9A%8E&query_place_id=ChIJOU8cAB2MGGARb9Qm5YEtfPY"
+    },
+    {
+      "name": "Kyushu Jangara — Akihabara",
+      "category": "restaurant",
+      "address": "Japan, 〒101-0021 Tokyo, Chiyoda City, Sotokanda, 3 Chome−11−6 一枝ビル １Ｆ",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kyushu%20Jangara%20Akihabara%2C%20Japan%2C%20%E3%80%92101-0021%20Tokyo%2C%20Chiyoda%20City%2C%20Sotokanda%2C%203%20Chome%E2%88%9211%E2%88%926%20%E4%B8%80%E6%9E%9D%E3%83%93%E3%83%AB%20%EF%BC%91%EF%BC%A6&query_place_id=ChIJ99Gizh2MGGARuDpsme65T9s"
+    },
+    {
+      "name": "Kushigin Akihabara / 串吟 秋葉原店 — optional",
+      "category": "food",
+      "address": "1-8-4 Kanda Sakumacho, Chiyoda City, Tokyo 101-0025, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B2%E5%90%9F%20%E7%A7%8B%E8%91%89%E5%8E%9F%E5%BA%97%2C%201-8-4%20Kanda%20Sakumacho%2C%20Chiyoda%20City%2C%20Tokyo%20101-0025%2C%20Japan"
+    },
+    {
+      "name": "Slow breakfast near hotel before Mito day trip",
+      "category": "food",
+      "address": "Tokyo Station / Nihonbashi / Ginza, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Mito lunch near station / Kairakuen",
+      "category": "food",
+      "address": "Mito Station / Kairakuen area, Mito, Ibaraki",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Mito pre-show food / snack",
+      "category": "food",
+      "address": "Near Mito LIGHT HOUSE, Mito, Ibaraki",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Post-concert late snack / decompression",
+      "category": "food",
+      "address": "Tokyo Station / hotel area",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "AFURI Harajuku",
+      "category": "food",
+      "address": "Japan, 〒151-0051 Tokyo, Shibuya, Sendagaya, 3 Chome−63−1 グランデフォレスタ原宿 1F",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=AFURI%20Harajuku%2C%20Japan%2C%20%E3%80%92151-0051%20Tokyo%2C%20Shibuya%2C%20Sendagaya%2C%203%20Chome%E2%88%9263%E2%88%921%20%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%82%BF%E5%8E%9F%E5%AE%BF%201F&query_place_id=ChIJba17TbqMGGARFtDV6hkZbcs"
+    },
+    {
+      "name": "Kaiten Sushi Ginza Onodera HONTEN — Omotesando",
+      "category": "restaurant",
+      "address": "5-1-6 Jingumae, Il Palazzino Omotesando 1F, Shibuya-ku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kaiten%20Sushi%20Ginza%20Onodera%20HONTEN%20%E2%80%94%20Omotesando&query_place_id=ChIJyZOxItGNGGARWwp9_I4dZDA"
+    },
+    {
+      "name": "Micasadeco & Cafe Jingumae",
+      "category": "food",
+      "address": "Japan, 〒150-0001 Tokyo, Shibuya, Jingumae, 6 Chome−13−2 １Ｆ",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Micasadeco%20%26%20Cafe%20Jingumae%2C%20Japan%2C%20%E3%80%92150-0001%20Tokyo%2C%20Shibuya%2C%20Jingumae%2C%206%20Chome%E2%88%9213%E2%88%922%20%EF%BC%91%EF%BC%A6&query_place_id=ChIJDf7Vf6aMGGARzNimzxLN2ds"
+    },
+    {
+      "name": "HIGUMA Doughnuts × Coffee Wrights Omotesando",
+      "category": "cafe",
+      "address": "4-9-13 Jingumae, Minagawa Village #5, Shibuya-ku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=HIGUMA%20Doughnuts%20%C3%97%20Coffee%20Wrights%20Omotesando&query_place_id=ChIJB4nX_beNGGARcvfg36ImbP8"
+    },
+    {
+      "name": "Iyoshi Cola — Shibuya Jingumae",
+      "category": "cafe",
+      "address": "Japan, 〒150-0001 Tokyo, Shibuya, Jingumae, 5 Chome−29−12 武居ビル",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Iyoshi%20Cola%2C%20Japan%2C%20%E3%80%92150-0001%20Tokyo%2C%20Shibuya%2C%20Jingumae%2C%205%20Chome%E2%88%9229%E2%88%9212%20%E6%AD%A6%E5%B1%85%E3%83%93%E3%83%AB&query_place_id=ChIJeSAL1WSNGGARRQOPnwYlYPo"
+    },
+    {
+      "name": "Shibuya dinner / izakaya flex",
+      "category": "food",
+      "address": "Shibuya, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Yakitori Sei",
+      "category": "restaurant",
+      "address": "7 Arakicho, Shinjuku City, Tokyo 160-0007, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yakitori%20Sei%2C%207%20Arakicho%2C%20Shinjuku%20City%2C%20Tokyo%20160-0007%2C%20Japan&query_place_id=ChIJy0F1EK-7JhURwrujSgOCWIE"
+    },
+    {
+      "name": "Final-night bar tour placeholder",
+      "category": "food",
+      "address": "Shinjuku / Golden Gai / Omoide Yokocho area, Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Ichigaku — Chicken Tonkotsu (鶏豚骨 一學)",
+      "category": "restaurant",
+      "address": "3 Chome-9 Yotsuya, Shinjuku City, Tokyo 160-0004, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ichigaku%20-%20Chicken%20Tonkotsu%2C%203%20Chome-9%20Yotsuya%2C%20Shinjuku%20City%2C%20Tokyo%20160-0004%2C%20Japan&query_place_id=ChIJhaFTDu2MGGARVaHgQg_ckQ8"
+    },
+    {
+      "name": "Ramen Nagi — Shinjuku Golden Gai main store",
+      "category": "food",
+      "address": "Japan, 〒160-0021 Tokyo, Shinjuku City, Kabukicho, 1 Chome−1−10 2階",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sugoi%20Niboshi%20Ramen%20Nagi%20Shinjuku%20Goldengai%20Honkan%2C%20Japan%2C%20%E3%80%92160-0021%20Tokyo%2C%20Shinjuku%20City%2C%20Kabukicho%2C%201%20Chome%E2%88%921%E2%88%9210%202%E9%9A%8E&query_place_id=ChIJAxKeZNmMGGARQ4EOGHqSdIg"
+    },
+    {
+      "name": "Breakfast near Mitsui Garden Hotel Nihonbashi Premier",
+      "category": "food",
+      "address": "4 Nihonbashimuromachi 3-chome, Chuo City, Tokyo 103-0022, Japan",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Departure-day lunch near Nihonbashi / Tokyo Station",
+      "category": "food",
+      "address": "Tokyo Station / airport transit",
+      "googleMapsUrl": null
+    }
+  ],
+  "version": "0c96a0046b9630aee72f6b2a2f2d758794409ea1d84722047414b72a6335896d"
+}
