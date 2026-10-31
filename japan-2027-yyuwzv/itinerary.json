@@ -597,10 +597,10 @@
       "alternatives": []
     },
     {
-      "name": "Mito lunch near station / Kairakuen",
+      "name": "Nuriya Izumicho Odori (ぬりや) — eel lunch",
       "category": "food",
-      "address": "Mito Station / Kairakuen area, Mito, Ibaraki",
-      "googleMapsUrl": null,
+      "address": "Nuriya Izumicho Odori, Izumicho, Mito, Ibaraki, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nuriya%20Izumicho%20Odori%20%28%E3%81%AC%E3%82%8A%E3%82%84%29%20%E2%80%94%20eel%20lunch%2C%20Nuriya%20Izumicho%20Odori%2C%20Izumicho%2C%20Mito%2C%20Ibaraki%2C%20Japan",
       "startTime": "2027-02-06T12:45",
       "durationMinutes": 75,
       "alternatives": []
@@ -1207,10 +1207,10 @@
       "googleMapsUrl": null
     },
     {
-      "name": "Mito lunch near station / Kairakuen",
+      "name": "Nuriya Izumicho Odori (ぬりや) — eel lunch",
       "category": "food",
-      "address": "Mito Station / Kairakuen area, Mito, Ibaraki",
-      "googleMapsUrl": null
+      "address": "Nuriya Izumicho Odori, Izumicho, Mito, Ibaraki, Japan",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nuriya%20Izumicho%20Odori%20%28%E3%81%AC%E3%82%8A%E3%82%84%29%20%E2%80%94%20eel%20lunch%2C%20Nuriya%20Izumicho%20Odori%2C%20Izumicho%2C%20Mito%2C%20Ibaraki%2C%20Japan"
     },
     {
       "name": "Mito pre-show food / snack",
@@ -1297,5 +1297,5 @@
       "googleMapsUrl": null
     }
   ],
-  "version": "6fe24212f8a86782059d9b2b4d1aceee31aeac80dc1dd2ac3e1f49118cff0c19"
+  "version": "b0021dde10caffd6e3be26300d7516d5695a868af1a65288552b93cb54c9cb62"
 }
