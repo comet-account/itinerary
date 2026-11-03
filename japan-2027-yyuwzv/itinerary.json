@@ -393,13 +393,20 @@
       ]
     },
     {
-      "name": "Bar High Five",
+      "name": "Ginza Music Bar",
       "category": "food",
-      "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−4−15 Efflore Ginza5 Bldg, B1F",
-      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High%20Five%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%924%E2%88%9215%20Efflore%20Ginza5%20Bldg%2C%20B1F&query_place_id=ChIJvbSR2e6LGGAR4Ihq9U2CsXQ",
+      "address": "Brown Place 4F, 7-8-13 Ginza, Chuo-ku, Tokyo 104-0061",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Music%20Bar%2C%20Brown%20Place%204F%2C%207-8-13%20Ginza%2C%20Chuo-ku%2C%20Tokyo%20104-0061",
       "startTime": "2027-02-04T22:45",
       "durationMinutes": 60,
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "Bar High Five",
+          "category": "food",
+          "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−4−15 Efflore Ginza5 Bldg, B1F",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High%20Five%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%924%E2%88%9215%20Efflore%20Ginza5%20Bldg%2C%20B1F&query_place_id=ChIJvbSR2e6LGGAR4Ihq9U2CsXQ"
+        }
+      ]
     },
     {
       "name": "Breakfast / coffee before Asakusa",
@@ -1135,6 +1142,12 @@
       "googleMapsUrl": "https://maps.app.goo.gl/41aosXJQQQhY3REF6"
     },
     {
+      "name": "Ginza Music Bar",
+      "category": "food",
+      "address": "Brown Place 4F, 7-8-13 Ginza, Chuo-ku, Tokyo 104-0061",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Music%20Bar%2C%20Brown%20Place%204F%2C%207-8-13%20Ginza%2C%20Chuo-ku%2C%20Tokyo%20104-0061"
+    },
+    {
       "name": "Bar High Five",
       "category": "food",
       "address": "Japan, 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−4−15 Efflore Ginza5 Bldg, B1F",
@@ -1297,5 +1310,5 @@
       "googleMapsUrl": null
     }
   ],
-  "version": "b0021dde10caffd6e3be26300d7516d5695a868af1a65288552b93cb54c9cb62"
+  "version": "e263e460ba0c1ab6f01b3fb30fe9b66a3697dbae653322d964a6d11e70a94b47"
 }
