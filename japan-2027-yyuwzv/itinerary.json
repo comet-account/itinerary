@@ -23,7 +23,7 @@
       "alternatives": []
     },
     {
-      "name": "Lunch / airport meal before long-haul flight",
+      "name": "Lunch / airport meal + flexible gate coffee before long-haul flight",
       "category": "food",
       "address": "Chicago O'Hare / in transit",
       "googleMapsUrl": null,
@@ -65,7 +65,14 @@
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20Airport%20%28HND%29%2C%20Haneda%20Airport%2C%20Ota%20City%2C%20Tokyo%2C%20Japan",
       "startTime": "2027-02-03T17:45",
       "durationMinutes": 75,
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "Optional arrivals coffee after immigration/bags — Tully’s T3 only if arriving T3 and time permits; otherwise hotel-area takeaway",
+          "category": "cafe",
+          "address": "Haneda Terminal 3 arrivals 2F, only if arriving T3; otherwise hotel area",
+          "googleMapsUrl": null
+        }
+      ]
     },
     {
       "name": "Haneda → Nihonbashi hotel transfer",
@@ -427,13 +434,20 @@
       ]
     },
     {
-      "name": "Breakfast / coffee before Asakusa",
+      "name": "Breakfast / coffee before Asakusa — optional Fuglen",
       "category": "food",
       "address": "Asakusa, Taito City, Tokyo",
       "googleMapsUrl": null,
       "startTime": "2027-02-05T08:30",
       "durationMinutes": 45,
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "Fuglen Asakusa",
+          "category": "food",
+          "address": "2-6-15 Asakusa, Taito-ku, Tokyo",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fuglen%20Asakusa%2C%202-6-15%20Asakusa%2C%20Taito-ku%2C%20Tokyo"
+        }
+      ]
     },
     {
       "name": "Senso-ji",
@@ -662,13 +676,20 @@
       "alternatives": []
     },
     {
-      "name": "Mito station / lockers / venue-area buffer",
+      "name": "Mito station / lockers / venue-area buffer — optional Saza coffee around 14:30",
       "category": "activity",
       "address": "Mito Station / central Mito, Ibaraki",
       "googleMapsUrl": null,
       "startTime": "2027-02-06T14:15",
       "durationMinutes": 90,
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "Saza Coffee — Mito Station",
+          "category": "food",
+          "address": "Excel Minami 3F, 1-7-31 Miyamachi, Mito, Ibaraki",
+          "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saza%20Coffee%20%E2%80%94%20Mito%20Station%2C%20Excel%20Minami%203F%2C%201-7-31%20Miyamachi%2C%20Mito%2C%20Ibaraki"
+        }
+      ]
     },
     {
       "name": "Mito pre-show food / snack",
@@ -940,7 +961,7 @@
       "alternatives": []
     },
     {
-      "name": "Departure-day lunch near Nihonbashi / Tokyo Station",
+      "name": "Departure-day lunch near Nihonbashi / Tokyo Station + optional coffee",
       "category": "food",
       "address": "Tokyo Station / airport transit",
       "googleMapsUrl": null,
@@ -993,7 +1014,7 @@
       "googleMapsUrl": null
     },
     {
-      "name": "Lunch / airport meal before long-haul flight",
+      "name": "Lunch / airport meal + flexible gate coffee before long-haul flight",
       "category": "food",
       "address": "Chicago O'Hare / in transit",
       "googleMapsUrl": null
@@ -1008,6 +1029,12 @@
       "name": "In-flight / arrival-day lunch",
       "category": "food",
       "address": "In transit to Tokyo",
+      "googleMapsUrl": null
+    },
+    {
+      "name": "Optional arrivals coffee after immigration/bags — Tully’s T3 only if arriving T3 and time permits; otherwise hotel-area takeaway",
+      "category": "cafe",
+      "address": "Haneda Terminal 3 arrivals 2F, only if arriving T3; otherwise hotel area",
       "googleMapsUrl": null
     },
     {
@@ -1209,10 +1236,16 @@
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High%20Five%2C%20Japan%2C%20%E3%80%92104-0061%20Tokyo%2C%20Chuo%20City%2C%20Ginza%2C%205%20Chome%E2%88%924%E2%88%9215%20Efflore%20Ginza5%20Bldg%2C%20B1F&query_place_id=ChIJvbSR2e6LGGAR4Ihq9U2CsXQ"
     },
     {
-      "name": "Breakfast / coffee before Asakusa",
+      "name": "Breakfast / coffee before Asakusa — optional Fuglen",
       "category": "food",
       "address": "Asakusa, Taito City, Tokyo",
       "googleMapsUrl": null
+    },
+    {
+      "name": "Fuglen Asakusa",
+      "category": "food",
+      "address": "2-6-15 Asakusa, Taito-ku, Tokyo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fuglen%20Asakusa%2C%202-6-15%20Asakusa%2C%20Taito-ku%2C%20Tokyo"
     },
     {
       "name": "Tokyo Curry Pan — Asakusa Kaminarimon",
@@ -1285,6 +1318,12 @@
       "category": "food",
       "address": "Nuriya Izumicho Odori, Izumicho, Mito, Ibaraki, Japan",
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nuriya%20Izumicho%20Odori%20%28%E3%81%AC%E3%82%8A%E3%82%84%29%20%E2%80%94%20eel%20lunch%2C%20Nuriya%20Izumicho%20Odori%2C%20Izumicho%2C%20Mito%2C%20Ibaraki%2C%20Japan"
+    },
+    {
+      "name": "Saza Coffee — Mito Station",
+      "category": "food",
+      "address": "Excel Minami 3F, 1-7-31 Miyamachi, Mito, Ibaraki",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Saza%20Coffee%20%E2%80%94%20Mito%20Station%2C%20Excel%20Minami%203F%2C%201-7-31%20Miyamachi%2C%20Mito%2C%20Ibaraki"
     },
     {
       "name": "Mito pre-show food / snack",
@@ -1365,11 +1404,11 @@
       "googleMapsUrl": null
     },
     {
-      "name": "Departure-day lunch near Nihonbashi / Tokyo Station",
+      "name": "Departure-day lunch near Nihonbashi / Tokyo Station + optional coffee",
       "category": "food",
       "address": "Tokyo Station / airport transit",
       "googleMapsUrl": null
     }
   ],
-  "version": "2fee034b7e791c4fe609c7416047c3272f4846eefab116c039dc412ff162018c"
+  "version": "7849478fa9ee574c8ab3c4fff58c08b213a1389d5b0fca45496058b1ea954d2a"
 }
