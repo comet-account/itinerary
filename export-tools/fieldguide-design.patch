@@ -1,0 +1,426 @@
+--- a/scripts/export_share.py
++++ b/scripts/export_share.py
+@@ -825,6 +825,8 @@
+             closed = "true" if is_closed_row else "false"
+             photo_html = render_place_photo(place)
+             photo_class = " has-photo" if photo_html else ""
++            support = not photo_html and (place.get("category") == "transport" or bool(re.search(r"transfer|buffer|arrival / cash|luggage|check.?out|check.?in", str(activity), re.I)) or is_closed_row)
++            support_attr = ' data-support="true"' if support else ''
+             coffee_meta = coffee_card_metadata(day, visit, place, places)
+             coffee_name = coffee_meta["name"] if coffee_meta else ""
+             coffee_href = coffee_meta["url"] if coffee_meta else ""
+@@ -837,12 +839,15 @@
+             stop_photo_page = render_venue_photo_page_link(str(visit.get("placeRef", "")))
+             stop_actions_html = f'<div class="actions stop-actions"><a class="action primary" href="{html.escape(from_here)}" target="_blank" rel="noopener">Navigate from here</a><a class="action" href="{html.escape(maps_url(place))}" target="_blank" rel="noopener">Details</a>{stop_photo_page}</div>' if is_nav_stop else ''
+             items.append(f"""
+-            <li id="stop-{html.escape(day)}-{stop_index}" class="stop{photo_class}" data-period="{period}" data-start="{html.escape(start)}" data-minutes="{int(visit.get('durationMinutes') or 0)}" data-closed="{closed}" data-nav="{html.escape(from_here)}" data-details="{html.escape(maps_url(place))}" data-day="{html.escape(day)}"{coffee_data}>
++            <li id="stop-{html.escape(day)}-{stop_index}" class="stop{photo_class}"{support_attr} data-period="{period}" data-start="{html.escape(start)}" data-minutes="{int(visit.get('durationMinutes') or 0)}" data-closed="{closed}" data-nav="{html.escape(from_here)}" data-details="{html.escape(maps_url(place))}" data-day="{html.escape(day)}"{coffee_data}>
+               <article class="card">
+                 <time class="time" datetime="{html.escape(start)}">{html.escape(time_label(start, visit.get('durationMinutes')))}</time>
++                {photo_html}
+                 <details class="stop-details">
+-                  <summary aria-label="Show notes and alternatives for {html.escape(place.get('name', 'Unknown place'))}"><span class="activity">{html.escape(activity)}</span><span class="stop-title">{html.escape(place.get('name', 'Unknown place'))}</span>{status_html}<span class="summary-address">{html.escape(loc.get('address', ''))}</span><span class="details-affordance">Notes / alternatives <span aria-hidden="true">＋</span></span></summary>
++                  <summary aria-label="Show notes and alternatives for {html.escape(place.get('name', 'Unknown place'))}"><span class="stop-title">{html.escape(place.get('name', 'Unknown place'))}</span>{status_html}<span class="details-affordance">Notes &amp; alternatives <span aria-hidden="true">＋</span></span></summary>
+                   <div class="stop-content">
++                    <p class="activity">{html.escape(activity)}</p>
++                    <p class="summary-address">{html.escape(loc.get('address', ''))}</p>
+                     {f'<p class="note">{html.escape(note)}</p>' if note else ''}
+                     {detail_link_html}
+                     {backups_html}
+@@ -851,7 +856,6 @@
+                   </div>
+                 </details>
+                 {stop_actions_html}
+-                {photo_html}
+               </article>
+             </li>
+             """)
+@@ -880,12 +884,10 @@
+         theme = day_theme(day)
+         day_sections.append(f"""
+         <section class="day" data-day="{html.escape(day)}" style="--day-accent:#1f513f;">
+-          <div class="day-hero" style="background-image:linear-gradient(90deg, rgba(17,38,29,.74), rgba(17,38,29,.16)), url('{html.escape(theme['image'])}');">
+-            <div><p class="hero-art-note">Illustrative atmosphere · not a venue photo</p>
+-              <p class="eyebrow">{html.escape(day_title)}</p>
+-              <h2>{html.escape(theme['title'])}</h2>
+-              <p>{html.escape(theme['subtitle'])}</p>
+-            </div>
++          <div class="day-hero">
++            <p class="eyebrow">Day {days.index(day) + 1:02d} / {len(days):02d} · {'Chicago' if day == days[0] else 'Japan'} · {len(by_day[day])} stops</p>
++            <h2>{html.escape(theme['title'])}</h2>
++            <p class="day-summary">{html.escape(time_label(str(by_day[day][0]['visit'].get('startTime', ''))))} start · {'Chicago local time' if day == days[0] else 'Japan local time'}</p>
+           </div>
+           {period_nav}
+           <ol class="day-flow" aria-label="Stops for {html.escape(day_title)}">{''.join(items)}</ol>
+@@ -904,198 +906,143 @@
+   <title>{html.escape(title)}</title>
+   <meta name="robots" content="noindex">
+   <style>
+-    :root {{ color-scheme: light; --ink:#111827; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --accent:#4f46e5; }}
+-    * {{ box-sizing: border-box; }}
+-    html {{ overflow-x:clip; }}
+-    body {{ margin:0; width:100%; max-width:100vw; overflow-x:clip; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:radial-gradient(circle at top left,#fef3c7 0,#f8fafc 28%,#eef2ff 100%); color:var(--ink); }}
+-    header {{ padding:34px 18px 24px; background:linear-gradient(135deg,rgba(49,46,129,.94),rgba(79,70,229,.9)), url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=80') center/cover; color:white; }}
+-    .wrap {{ width:min(100%,900px); max-width:100%; margin: 0 auto; }}
+-    h1 {{ margin:0 0 8px; font-size: clamp(30px, 7vw, 54px); letter-spacing:-0.05em; text-wrap:balance; }}
+-    .meta {{ opacity:.9; font-size:14px; overflow-wrap:anywhere; }}
+-    main {{ padding: 18px; width:100%; max-width:100vw; overflow:hidden; }}
+-    .map-wrap {{ width:min(100%,900px); max-width:900px; margin:18px auto 28px; background:rgba(255,255,255,.9); border:1px solid rgba(255,255,255,.7); border-radius:24px; overflow:hidden; box-shadow:0 18px 48px rgba(15,23,42,.14); backdrop-filter: blur(8px); }}
+-    .copy-wrap {{ width:min(100%,900px); max-width:900px; margin:18px auto 28px; display:flex; align-items:center; justify-content:space-between; gap:16px; background:rgba(255,255,255,.94); border:1px solid rgba(255,255,255,.75); border-radius:24px; padding:18px; box-shadow:0 14px 36px rgba(15,23,42,.12); }}
+-    .copy-wrap h2 {{ margin:0 0 4px; font-size:22px; }}
+-    .copy-wrap p {{ color:var(--muted); font-size:13px; line-height:1.4; }}
+-    .copy-wrap button {{ flex:0 0 auto; border:0; border-radius:14px; background:#4f46e5; color:white; font:inherit; font-weight:900; padding:12px 16px; cursor:pointer; box-shadow:0 10px 24px rgba(79,70,229,.28); }}
+-    .copy-status {{ min-width:96px; text-align:right; font-weight:800; color:#059669 !important; }}
+-    .map-head {{ padding:16px 18px 14px; }}
+-    .map-head h2 {{ margin:0 0 4px; font-size:22px; }}
+-    .map-head p {{ color:var(--muted); font-size:13px; line-height:1.4; overflow-wrap:anywhere; }}
+-    .map-snapshot {{ display:block; width:100%; max-width:100%; height:auto; max-height: min(58vh, 520px); border-top:1px solid var(--line); background:#eef2f7; }}
+-    .map-snapshot .pin {{ filter: drop-shadow(0 2px 5px rgba(15,23,42,.35)); }}
+-    .map-caption {{ padding:8px 12px; color:var(--muted); font-size:11px; border-top:1px solid var(--line); background:#f8fafc; }}
+-    .day {{ margin: 0 auto 28px; width:min(100%,900px); max-width:900px; }}
+-    .day-hero {{ width:100%; max-width:100%; min-height:172px; display:flex; align-items:flex-end; gap:16px; padding:22px; margin:0 0 14px; color:white; background-size:cover; background-position:center; border-radius:26px; box-shadow:0 18px 46px rgba(15,23,42,.18); overflow:hidden; }}
+-    .day-icon {{ width:58px; height:58px; display:grid; place-items:center; font-size:34px; line-height:1; border-radius:18px; background:rgba(255,255,255,.92); box-shadow:0 12px 28px rgba(15,23,42,.2); flex:0 0 auto; }}
+-    .day-hero .eyebrow {{ margin:0 0 4px; font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.12em; opacity:.9; }}
+-    .day-hero h2 {{ margin:0 0 4px; font-size:clamp(24px,5vw,38px); letter-spacing:-.04em; text-shadow:0 2px 18px rgba(0,0,0,.35); }}
+-    .day-hero p {{ max-width:620px; line-height:1.35; opacity:.94; overflow-wrap:anywhere; }}
+-    .day-map {{ width:100%; max-width:100%; background:rgba(255,255,255,.94); border:1px solid rgba(255,255,255,.75); border-radius:20px; overflow:hidden; margin:0 0 14px; box-shadow:0 10px 28px rgba(15,23,42,.1); }}
+-    .day-map-label {{ padding:10px 12px; font-size:12px; font-weight:900; color:#374151; background:linear-gradient(90deg,#fff, color-mix(in srgb, var(--day-accent) 12%, white)); border-bottom:1px solid var(--line); text-transform:uppercase; letter-spacing:.06em; }}
+-    .day-map .map-snapshot {{ max-height:360px; border-top:0; }}
+-    .day-map .map-caption {{ font-size:10px; }}
+-    ol {{ width:100%; max-width:100%; list-style:none; margin:0; padding:0; border-left:3px solid color-mix(in srgb, var(--day-accent) 40%, var(--line)); }}
+-    .stop {{ width:100%; max-width:100%; display:grid; grid-template-columns: 82px 1fr; gap:12px; margin:0 0 14px; padding-left:14px; scroll-margin-top:70px; }}
+-    .time {{ font-size:12px; color:#475569; padding-top:18px; margin-left:-14px; font-weight:800; }}
+-    .card {{ position:relative; width:100%; max-width:100%; min-width:0; overflow:hidden; background:rgba(255,255,255,.96); border:1px solid rgba(226,232,240,.9); border-radius:20px; padding:0; box-shadow:0 10px 24px rgba(15,23,42,.08); }}
+-    .card::before {{ content:""; position:absolute; left:-24px; top:22px; width:13px; height:13px; border-radius:999px; background:var(--day-accent); border:3px solid white; box-shadow:0 0 0 3px color-mix(in srgb, var(--day-accent) 25%, transparent); }}
+-    .stop-icon {{ position:absolute; left:14px; top:16px; width:30px; height:30px; padding:5px; border-radius:11px; background:color-mix(in srgb, var(--day-accent) 12%, white); }}
+-    .activity {{ color:var(--day-accent); font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.06em; overflow-wrap:anywhere; }}
+-    h3 {{ margin:4px 0 6px; font-size:18px; letter-spacing:-.015em; overflow-wrap:anywhere; }}
+-    p {{ margin:0; }}
+-    .address,.note {{ color:var(--muted); font-size:13px; line-height:1.45; overflow-wrap:anywhere; }}
+-    .note {{ margin-top:7px; color:#334155; }}
+-    .links {{ margin-top:10px; }}
+-    a {{ color:var(--day-accent, var(--accent)); font-weight:800; text-decoration:none; }}
+-    .labels {{ display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }}
+-    .labels span {{ font-size:11px; color:#334155; background:color-mix(in srgb, var(--day-accent) 10%, #eef2ff); padding:3px 8px; border-radius:999px; }}
+-    .venue-photo {{ margin:0; max-width:100%; padding:0 12px 12px; }}
+-    .venue-photo-link {{ display:inline-block; max-width:100%; border-radius:12px; overflow:hidden; background:#f1f5f9; }}
+-    .venue-photo-link img {{ display:block; width:auto; height:auto; max-width:min(100%,220px); max-height:260px; object-fit:contain; }}
+-    .venue-photo-action {{ display:block; padding:8px 10px; font-size:12px; background:#eef2ff; }}
+-    .venue-photo figcaption {{ font-size:10px; margin-top:5px; overflow-wrap:anywhere; }}
+-    .venue-photo figcaption a {{ color:var(--muted); font-weight:500; }}
+-    .venue-photo-link:focus-visible {{ outline:3px solid var(--day-accent); outline-offset:3px; }}
+-    .shopping-backups {{ margin-top:12px; border:1px solid #e0dcc8; border-radius:12px; padding:10px 12px; background:#f2f0e6; }}
+-    .shopping-backups summary {{ cursor:pointer; font-size:13px; font-weight:800; color:#685523; }}
+-    .shopping-backups ul {{ padding-left:18px; }}
+-    .shopping-backups li {{ margin:12px 0; font-size:13px; overflow-wrap:anywhere; }}
+-    .shopping-backups .venue-photo {{ max-width:380px; }}
+-    /* Calm, phone-first operating plan */
+-    :root {{ --ink:#183329; --muted:#52675d; --line:#d9e2d7; --bg:#f5f3e9; --card:#fffdf6; --accent:#24563f; --day-accent:#24563f; }}
+-    body {{ background:var(--bg); font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif; color:var(--ink); }}
+-    header {{ padding:10px 14px 3px; background:var(--bg); color:var(--ink); }}
+-    header h1 {{ font-size:clamp(21px,5.6vw,32px); letter-spacing:-.04em; line-height:1.05; margin-bottom:4px; }}
+-    .meta {{ color:var(--muted); opacity:1; }}
+-    main {{ padding:12px 16px 36px; overflow:visible; }}
+-    .day-nav {{ width:min(100%,900px); margin:0 auto 8px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:10px; align-items:center; }}
+-    .day-nav select,.tab-button,.download-day {{ min-height:44px; font:600 15px/1.2 ui-sans-serif,system-ui,sans-serif; border:1px solid #9bad9e; border-radius:12px; background:var(--card); color:var(--ink); padding:8px 12px; }}
+-    .day-tabs {{ width:min(100%,900px); display:flex; gap:8px; margin:0 auto 10px; }}
+-    .tab-button {{ min-width:120px; cursor:pointer; }}
+-    .tab-button[aria-pressed="true"] {{ background:var(--accent); color:#fff; border-color:var(--accent); }}
+-    .today-cue {{ width:min(100%,900px); margin:0 auto 12px; color:var(--accent); font:700 14px/1.4 ui-sans-serif,system-ui,sans-serif; }}
+-    .day {{ width:min(100%,900px); margin:0 auto 20px; }}
+-    .day[hidden], [hidden] {{ display:none !important; }}
+-    .period-nav {{ position:sticky; top:0; z-index:5; display:flex; gap:8px; overflow-x:auto; padding:8px 0 10px; margin:0 0 10px; background:var(--bg); scrollbar-width:none; }}
+-    .period-nav a {{ flex:0 0 auto; min-height:38px; display:inline-flex; align-items:center; padding:7px 13px; border:1px solid #c7d6c8; border-radius:999px; background:var(--card); color:var(--accent); font:700 13px/1 ui-sans-serif,system-ui,sans-serif; white-space:nowrap; }}
+-    .period-nav a:focus-visible {{ outline:3px solid #bd6c24; outline-offset:2px; }}
+-    .day-hero {{ min-height:0; padding:15px 18px; border-radius:14px; box-shadow:none; margin-bottom:10px; background-color:#234a38; background-size:cover; background-position:center; }}
+-    .hero-art-note {{ display:inline-block; margin:0 0 5px; padding:3px 7px; border-radius:999px; background:rgba(16,39,29,.65); color:#fff; font:700 10px/1.2 ui-sans-serif,system-ui,sans-serif; }}
+-    .day-hero h2 {{ font-size:clamp(24px,6vw,34px); letter-spacing:-.035em; }}
+-    .day-hero p {{ color:#fff; font-size:13px; line-height:1.35; }}
+-    .next-card,.coffee-card {{ width:min(100%,900px); margin:0 auto 10px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:0 4px 12px rgba(24,51,41,.07); }}
+-    .next-card {{ display:grid; grid-template-columns:minmax(0,1fr) 92px; gap:3px 12px; align-items:center; }}
+-    .next-card:not(.has-image) {{ grid-template-columns:minmax(0,1fr); }}
+-    .next-card .eyebrow,.next-card h2,.next-card #next-time {{ grid-column:1; }}
+-    .next-card .eyebrow {{ font:700 10px/1.2 ui-sans-serif,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }}
+-    .next-card h2,.coffee-card h2 {{ font-size:18px; margin:0 0 4px; }}
+-    .next-card #next-time {{ font:12px/1.35 ui-sans-serif,system-ui,sans-serif; color:var(--muted); }}
+-    .next-card .next-image {{ grid-column:2; grid-row:1/4; width:92px; height:82px; object-fit:cover; border-radius:10px; margin:0; background:#e3e5dc; }}
+-    .actions {{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }}
+-    .stop-actions {{ margin:0; padding:0 12px 12px; }}
+-    .stop:not(.has-photo) .card {{ background:#f0f1e9; box-shadow:none; }}
+-    .stop:not(.has-photo) .details-affordance {{ color:#66766e; }}
+-    .next-card .actions {{ grid-column:1/-1; margin-top:4px; }}
+-    .action {{ display:inline-flex; min-height:44px; align-items:center; justify-content:center; padding:9px 13px; border-radius:11px; border:1px solid #547362; color:var(--accent); font:700 14px/1.2 ui-sans-serif,system-ui,sans-serif; }}
+-    .action.primary {{ background:var(--accent); color:#fff; border-color:var(--accent); }}
+-    .photo-page-link-wrap {{ display:flex; align-self:flex-start; flex:1 1 125px; flex-direction:column; gap:2px; min-width:0; }}
+-    .photo-page-link-wrap .action {{ width:100%; flex:0 0 auto; }}
+-    .photo-page-credit {{ padding:0 5px; color:var(--muted); font:10px/1.3 ui-sans-serif,system-ui,sans-serif; }}
+-    .action:focus-visible,.tab-button:focus-visible,.day-nav select:focus-visible,.download-day:focus-visible,summary:focus-visible,a:focus-visible {{ outline:3px solid #bd6c24; outline-offset:3px; }}
+-    .stop {{ grid-template-columns:76px minmax(0,1fr); gap:10px; padding-left:8px; margin-bottom:8px; }}
+-    .time {{ padding-top:16px; margin-left:-8px; color:var(--accent); font:700 13px/1.3 ui-sans-serif,system-ui,sans-serif; }}
+-    .card {{ padding:0; border-color:var(--line); box-shadow:none; background:var(--card); }}
+-    .stop-details>summary {{ min-height:56px; padding:12px 14px; cursor:pointer; list-style:none; display:grid; gap:3px 10px; grid-template-columns:minmax(0,1fr) auto; align-items:center; }}
+-    .details-affordance {{ grid-column:1/-1; display:flex; justify-content:space-between; align-items:center; margin-top:4px; color:var(--muted); font:700 12px/1.3 ui-sans-serif,system-ui,sans-serif; }}
+-    .details-affordance span {{ font-size:18px; transition:transform .15s ease; }}
+-    .stop-details[open] .details-affordance span {{ transform:rotate(180deg); }}
+-    .stop-details>summary::-webkit-details-marker {{ display:none; }}
+-    .stop-title {{ font-size:18px; font-weight:700; overflow-wrap:anywhere; }}
+-    .activity {{ grid-column:1/-1; color:var(--accent); font:700 11px/1.3 ui-sans-serif,system-ui,sans-serif; letter-spacing:.04em; }}
+-    .summary-address {{ grid-column:1/-1; color:var(--muted); font:13px/1.35 ui-sans-serif,system-ui,sans-serif; overflow-wrap:anywhere; }}
+-    .status-badge {{ padding:4px 8px; border-radius:999px; background:#e7eee6; color:#214d37; font:700 11px/1.2 ui-sans-serif,system-ui,sans-serif; }}
+-    .status-badge.status-optional {{ background:#f3ead2; color:#755719; }}
+-    .stop-content {{ padding:0 14px 14px; font-family:ui-sans-serif,system-ui,sans-serif; }}
+-    .planned-leg {{ margin-top:10px; font-size:13px; }}
+-    .venue-photo a {{ display:inline-block; }}
+-    .day-map,.map-wrap,.copy-wrap {{ box-shadow:none; border-color:var(--line); border-radius:16px; background:var(--card); }}
+-    .planning-label {{ width:min(100%,900px); margin:10px auto; font-weight:700; }}
+-    .download-day {{ display:block; width:min(100%,900px); margin:12px auto; cursor:pointer; background:#fffdf6; }}
+-    .offline-note {{ width:min(100%,900px); margin:8px auto 16px; color:var(--muted); font:13px/1.45 ui-sans-serif,system-ui,sans-serif; }}
+-    .day-section-list {{ width:100%; }}
+-    .links {{ display:flex; flex-wrap:wrap; gap:8px; }}
+-    footer {{ font:12px/1.4 ui-sans-serif,system-ui,sans-serif; }}
+-    .day-carousel {{ width:min(100%,900px); margin:0 auto 14px; display:grid; grid-template-columns:44px minmax(0,1fr) 44px; gap:8px; align-items:center; }}
+-    .carousel-arrow {{ width:44px; height:48px; border:1px solid #9bad9e; border-radius:12px; background:var(--card); color:var(--accent); font:700 22px/1 ui-sans-serif,system-ui,sans-serif; cursor:pointer; }}
+-    .carousel-arrow:disabled {{ opacity:.38; cursor:default; }}
+-    .carousel-track {{ min-width:0; overflow:hidden; border-radius:14px; }}
+-    .carousel-slides {{ display:flex; align-items:stretch; gap:8px; transition:transform .24s ease; will-change:transform; }}
+-    .carousel-day {{ flex:0 0 76%; min-height:56px; border:1px solid #9bad9e; border-radius:12px; background:#e7eee6; color:#52675d; padding:8px; font:600 13px/1.2 ui-sans-serif,system-ui,sans-serif; cursor:pointer; }}
+-    .carousel-day[aria-current="date"] {{ background:var(--accent); color:white; border-color:var(--accent); font-size:16px; }}
+-    .carousel-position {{ grid-column:1/-1; text-align:center; color:var(--muted); font:12px/1.3 ui-sans-serif,system-ui,sans-serif; }}
+-    .carousel-dots {{ grid-column:1/-1; display:flex; justify-content:center; gap:8px; }}
+-    .carousel-dot {{ width:24px; height:24px; padding:0; border:0; background:transparent; cursor:pointer; }}
+-    .carousel-dot::before {{ content:""; display:block; width:8px; height:8px; margin:auto; border-radius:50%; background:#9bad9e; }}
+-    .carousel-dot[aria-current="date"]::before {{ width:18px; border-radius:8px; background:var(--accent); }}
+-    .carousel-arrow:focus-visible,.carousel-day:focus-visible,.carousel-dot:focus-visible {{ outline:3px solid #bd6c24; outline-offset:2px; }}
+-    @media (prefers-reduced-motion:reduce) {{ .carousel-slides {{ transition:none; }} }}
+-    .swipe-hint {{ grid-column:1/-1; width:100%; margin:0; color:var(--muted); font:12px/1.3 ui-sans-serif,system-ui,sans-serif; text-align:center; }}
+-    @media (hover:none) and (pointer:coarse) {{ .swipe-hint {{ display:block; }} }}
+-    @media (hover:hover), (pointer:fine) {{ .swipe-hint {{ display:none; }} }}
+-    @media (max-width:520px) {{ header {{ padding:10px 14px 3px; }} header h1 {{ font-size:clamp(21px,5.6vw,27px); }} .meta {{ font-size:11px; }} main {{ padding:6px 12px 28px; }} .day-nav {{ grid-template-columns:auto minmax(0,1fr); gap:8px; margin-bottom:6px; }} .day-tabs {{ display:grid; grid-template-columns:1fr 1fr; margin-bottom:10px; }} .tab-button {{ width:100%; }} .stop {{ grid-template-columns:60px minmax(0,1fr); gap:7px; padding-left:8px; }} .time {{ font-size:11px; margin-left:-8px; top:90px; }} .stop::before {{ left:-6px; }} .stop-details>summary {{ padding:11px; }} .next-card,.coffee-card {{ padding:10px 12px; }} .action {{ flex:1 1 125px; }} .period-nav {{ top:0; }} .stop-actions .action {{ min-height:40px; padding:8px 10px; font-size:13px; }} .venue-photo {{ padding:0 10px 10px; }} }}
+-
+-    @media (max-width:350px) {{ .stop {{ grid-template-columns:1fr; padding-left:0; }} .time {{ margin:0; padding:0 0 3px; }} .day-hero {{ padding:15px; }} }}
+-    footer {{ color:var(--muted); font-size:12px; text-align:center; padding:18px; }}
+-
+ 
+-    /* Vertical day-flow: scrolling position is not the actual clock. */
+-    header {{ padding:8px 14px 0; }}
+-    header h1 {{ font:700 15px/1.3 ui-sans-serif,system-ui,sans-serif; letter-spacing:0; margin:0; }}
+-    header .meta {{ display:none; }}
+-    main {{ padding:8px 12px 28px; }}
+-    .day-tabs {{ gap:6px; margin-bottom:5px; }}
+-    .tab-button {{ min-width:0; width:auto; min-height:36px; padding:6px 12px; font-size:12px; }}
+-    .date-dock {{ position:sticky; top:0; z-index:20; background:rgba(245,243,233,.97); backdrop-filter:blur(12px); width:min(100%,900px); margin:0 auto 6px; padding:4px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1fr) 44px; gap:4px; padding-top:max(4px,env(safe-area-inset-top)); }}
+-    .day-carousel {{ width:100%; margin:0; grid-template-columns:40px minmax(0,1fr) 40px; gap:4px; }}
+-    .carousel-arrow {{ width:40px; height:44px; border:0; background:transparent; }}
+-    .carousel-day {{ min-height:44px; padding:6px; flex-basis:82%; font-size:11px; border:0; background:transparent; }}
+-    .carousel-day[aria-current="date"] {{ font-size:14px; background:#e4eadf; color:var(--ink); }}
+-    .carousel-position,.carousel-dots,.swipe-hint {{ display:none!important; }}
+-    .day-nav {{ width:44px; margin:0; display:block; position:relative; }}
+-    .day-nav label {{ position:absolute; inset:0; display:grid; place-items:center; font-size:0; pointer-events:none; }}
+-    .day-nav label::after {{ content:"▦"; font:24px/1 system-ui; color:var(--accent); }}
+-    .day-nav select {{ width:44px; height:44px; opacity:0; padding:0; cursor:pointer; }}
+-    .day-nav:focus-within {{ outline:3px solid #bd6c24; border-radius:10px; }}
+-    .today-cue {{ font-size:10px; margin-bottom:6px; }}
+-    .next-card {{ margin-bottom:8px; }}
+-    .next-card[data-live="false"] {{ display:none; }}
+-    .day-hero {{ min-height:0; padding:10px 12px; margin-bottom:6px; border-radius:12px; }}
+-    .day-hero h2 {{ font-size:21px; margin:0; }}
+-    .day-hero .eyebrow,.day-hero p:not(.hero-art-note) {{ display:none; }}
+-    .day-hero .hero-art-note {{ display:block; padding:0; margin:3px 0 0; font-size:9px; background:none; opacity:.8; }}
+-    .period-nav {{ position:static; padding:0; gap:6px; margin-bottom:8px; background:transparent; }}
+-    .period-nav a {{ min-height:36px; font-size:11px; padding:6px 9px; border:0; background:transparent; }}
+-    .day-flow {{ position:relative; border:0; padding:0 0 0 24px; }}
+-    .day-flow::before {{ content:""; position:absolute; left:8px; top:13px; bottom:14px; width:4px; border-radius:6px; background:linear-gradient(to bottom,#eac390 0%,#eac390 calc(var(--noon,35%) - 5%),#f3cf6c var(--noon,35%),#f3cf6c calc(var(--afternoon,55%) - 5%),#d99b6b var(--afternoon,55%),#d99b6b calc(var(--evening,75%) - 5%),#626b91 var(--evening,75%),#303f64 100%); }}
+-    .stop {{ display:block; position:relative; padding:0; margin:0 0 14px; border:0; scroll-margin-top:82px; }}
+-    .stop::before {{ content:""; position:absolute; left:-19px; top:16px; width:10px; height:10px; border:2px solid var(--bg); background:#cfac77; border-radius:50%; box-shadow:none; }}
+-    .stop[data-period="noon"]::before {{ background:#d4ac39; }}
+-    .stop[data-period="afternoon"]::before {{ background:#bf8257; }}
+-    .stop[data-period="evening"]::before {{ background:#566487; }}
+-    .stop:has(.phase-divider)::before {{ top:42px; }}
+-    .phase-divider {{ height:30px; display:flex; align-items:center; font:700 11px/1 ui-sans-serif,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.12em; color:#7e6548; }}
+-    .phase-divider[data-phase="evening"] {{ color:#4f5c7b; }}
+-    .card::before {{ display:none; }}
+-    .time {{ display:block; position:static; padding:10px 12px 0; margin:0; font:600 11px/1.3 ui-sans-serif,system-ui,sans-serif; color:var(--muted); }}
+-    .flow-marker {{ position:absolute; z-index:6; left:-3px; top:0; width:26px; height:26px; border:2px solid var(--bg); border-radius:50%; display:grid; place-items:center; font:18px/1 system-ui; background:#f7e3af; box-shadow:0 1px 5px #0002; pointer-events:none; }}
+-    .flow-marker[data-phase="evening"] {{ background:#344767; color:#fff; }}
+-    .stop.is-now .time::after {{ content:" · NOW"; font-weight:800; color:#246449; }}
+-    .day-extras {{ width:min(100%,900px); margin:16px auto; border:1px solid var(--line); border-radius:12px; padding:12px; }}
+-    .day-extras>summary {{ min-height:32px; font:700 14px/1.5 system-ui; cursor:pointer; }}
+-    .day-extras .coffee-card {{ border:0; padding:10px 0 0; margin:0; box-shadow:none; }}
+-    @media(max-width:520px) {{ header {{padding:8px 12px 0}} header h1 {{font-size:15px}} .day-tabs {{display:flex}} .tab-button {{width:auto}} .stop {{display:block;padding:0}} .time {{margin:0;padding:10px 12px 0;font-size:11px;position:static}} .day-hero {{padding:10px 12px}} }}
+-    @media(prefers-reduced-motion:reduce) {{ *,*::before,*::after {{scroll-behavior:auto!important;transition:none!important}} }}
++:root {{ color-scheme:light; --ink:#233b31; --muted:#66736b; --line:#dddcd2; --bg:#f7f5ef; --card:#fffefb; --accent:#315f49; --day-accent:#315f49; }}
++* {{ box-sizing:border-box; }}
++html {{ overflow-x:clip; scroll-behavior:smooth; }}
++body {{ margin:0; width:100%; overflow-x:clip; background:var(--bg); color:var(--ink); font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }}
++p,h1,h2,h3,figure {{ margin:0; }}
++button,select {{ font:inherit; }}
++a {{ color:var(--accent); text-decoration:none; }}
++button,a,summary,select {{ -webkit-tap-highlight-color:transparent; }}
++button {{ cursor:pointer; }}
++[hidden],.day[hidden] {{ display:none!important; }}
++a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible {{ outline:3px solid #b97537; outline-offset:3px; }}
++.wrap,.day,.day-tabs,.date-dock,.today-cue,.next-card,.day-extras,#planning-view {{ width:min(100%,740px); margin-left:auto; margin-right:auto; }}
++header {{ padding:16px 16px 0; }}
++header h1 {{ font-size:13px; font-weight:650; line-height:1.4; letter-spacing:.01em; }}
++header .meta {{ display:none; }}
++main {{ padding:0 16px 32px; }}
++.day-tabs {{ display:flex; gap:22px; border-bottom:1px solid var(--line); margin-bottom:0; }}
++.tab-button {{ min-height:44px; padding:10px 0 9px; color:var(--muted); border:0; border-bottom:2px solid transparent; background:transparent; font-size:13px; font-weight:600; }}
++.tab-button[aria-pressed="true"] {{ color:var(--ink); border-bottom-color:var(--accent); }}
++.date-dock {{ position:sticky; top:0; z-index:20; display:grid; grid-template-columns:minmax(0,1fr) 44px; gap:4px; padding:5px 0; padding-top:max(5px,env(safe-area-inset-top)); background:rgba(247,245,239,.97); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }}
++.day-carousel {{ min-width:0; display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center; gap:4px; }}
++.carousel-arrow {{ width:44px; height:44px; border:0; border-radius:50%; background:transparent; color:var(--accent); font-size:26px; }}
++.carousel-arrow:disabled {{ opacity:.25; cursor:default; }}
++.carousel-track {{ min-width:0; overflow:hidden; border-radius:8px; }}
++.carousel-slides {{ display:flex; gap:8px; transition:transform .22s ease; }}
++.carousel-day {{ flex:0 0 100%; min-height:44px; padding:7px; border:0; border-radius:8px; background:transparent; color:var(--muted); font-size:14px; font-weight:650; }}
++.carousel-day[aria-current="date"] {{ color:var(--ink); background:#ebece4; }}
++.carousel-position,.carousel-dots,.swipe-hint {{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }}
++.carousel-dots,.swipe-hint {{ display:none; }}
++.day-nav {{ position:relative; width:44px; height:44px; border-left:1px solid var(--line); }}
++.day-nav label {{ position:absolute; inset:0; display:grid; place-items:center; font-size:0; pointer-events:none; }}
++.day-nav label::after {{ content:"▦"; font:24px/1 system-ui; color:var(--accent); }}
++.day-nav select {{ width:44px; height:44px; opacity:0; cursor:pointer; }}
++.day-nav:focus-within {{ outline:3px solid #b97537; border-radius:8px; }}
++.today-cue {{ font-size:11px; line-height:1.4; color:var(--muted); margin-top:9px; }}
++.today-cue[data-live="false"] {{ display:none; }}
++.day-hero {{ padding:20px 0 11px; }}
++.day-hero .eyebrow {{ color:var(--muted); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:7px; }}
++.day-hero h2 {{ font-family:Georgia,"Iowan Old Style",serif; font-size:clamp(27px,6.8vw,38px); font-weight:500; line-height:1.08; letter-spacing:-.035em; max-width:580px; text-wrap:balance; }}
++.day-hero .day-summary {{ margin-top:9px; font-size:12px; color:var(--muted); line-height:1.4; }}
++.period-nav {{ display:flex; gap:4px; overflow-x:auto; scrollbar-width:none; margin:0 0 12px; border-bottom:1px solid var(--line); }}
++.period-nav a {{ display:flex; align-items:center; min-height:44px; padding:8px 12px; font-size:12px; white-space:nowrap; font-weight:600; }}
++.period-nav a:first-child {{ padding-left:0; }}
++.day-flow {{ position:relative; list-style:none; padding:0 0 0 24px; margin:0; }}
++.day-flow::before {{ content:""; position:absolute; left:7px; top:13px; bottom:14px; width:3px; border-radius:6px; background:linear-gradient(to bottom,#eac390 0%,#eac390 calc(var(--noon,35%) - 5%),#f3cf6c var(--noon,35%),#f3cf6c calc(var(--afternoon,55%) - 5%),#d99b6b var(--afternoon,55%),#d99b6b calc(var(--evening,75%) - 5%),#626b91 var(--evening,75%),#303f64 100%); }}
++.stop {{ display:block; position:relative; margin:0 0 20px; padding:0; scroll-margin-top:76px; }}
++.stop::before {{ content:""; position:absolute; left:-20px; top:14px; width:10px; height:10px; border:2px solid var(--bg); border-radius:50%; background:#cfac77; }}
++.stop[data-period="noon"]::before {{ background:#d4ac39; }}
++.stop[data-period="afternoon"]::before {{ background:#bf8257; }}
++.stop[data-period="evening"]::before {{ background:#566487; }}
++.stop:has(.phase-divider)::before {{ top:44px; }}
++.phase-divider {{ height:30px; display:flex; align-items:center; color:#8b6a40; font-size:10px; font-weight:750; text-transform:uppercase; letter-spacing:.14em; }}
++.phase-divider[data-phase="evening"] {{ color:#4f5c7b; }}
++.flow-marker {{ position:absolute; z-index:6; left:-4px; top:0; width:26px; height:26px; display:grid; place-items:center; border:2px solid var(--bg); border-radius:50%; background:#f6e5bf; font:18px/1 system-ui; box-shadow:0 1px 5px #0002; pointer-events:none; }}
++.flow-marker[data-phase="evening"] {{ background:#344767; color:white; }}
++.card {{ min-width:0; overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:14px; }}
++.time {{ display:block; padding:12px 14px 0; color:var(--muted); font-size:12px; line-height:1.35; font-weight:650; font-variant-numeric:tabular-nums; }}
++.stop.is-now .time::after {{ content:" · NOW"; color:var(--accent); font-weight:800; }}
++.stop.is-now .card {{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }}
++.stop-details>summary {{ position:relative; display:flex; flex-wrap:wrap; gap:7px; min-height:44px; padding:9px 14px 10px; list-style:none; cursor:pointer; }}
++.stop-details>summary::-webkit-details-marker {{ display:none; }}
++.stop-title {{ width:100%; font:600 21px/1.16 Georgia,"Iowan Old Style",serif; letter-spacing:-.02em; overflow-wrap:anywhere; }}
++.details-affordance {{ display:flex; width:100%; justify-content:space-between; align-items:center; color:var(--muted); font-size:11px; line-height:1.4; }}
++.details-affordance span {{ font-size:18px; font-weight:400; }}
++.stop-details[open] .details-affordance span {{ transform:rotate(45deg); }}
++.status-badge {{ display:inline-flex; align-items:center; padding:4px 7px; border-radius:5px; background:#e8eee5; color:#31543c; font:700 10px/1.2 system-ui; }}
++.status-optional {{ background:#f0e9d7; color:#775b2f; }}
++.stop[data-closed="true"] .status-badge {{ color:#884237; background:#f5e7e1; }}
++.stop-content {{ padding:2px 14px 14px; }}
++.activity {{ margin-bottom:7px; color:var(--ink); font-size:12px; font-weight:650; line-height:1.5; }}
++.summary-address,.note,.planned-leg {{ font-size:13px; color:var(--muted); line-height:1.6; overflow-wrap:anywhere; }}
++.note,.planned-leg {{ margin-top:9px; }}
++.planned-leg a {{ display:inline-flex; align-items:center; min-height:44px; text-decoration:underline; text-underline-offset:3px; }}
++.labels {{ display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }}
++.labels span {{ padding:4px 7px; border-radius:5px; background:#f0f0e9; color:var(--muted); font-size:10px; }}
++.actions {{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }}
++.stop-actions {{ margin:0; padding:0 14px 13px; }}
++.action {{ display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:9px 12px; border:1px solid #cbd4c8; border-radius:8px; color:var(--accent); font-size:12px; font-weight:650; line-height:1.35; text-align:center; }}
++.stop-actions .action {{ flex:1 1 auto; }}
++.action.primary {{ background:var(--accent); border-color:var(--accent); color:white; }}
++.venue-photo {{ position:relative; margin:0; }}
++.card>.venue-photo {{ margin:10px 0 0; }}
++.venue-photo-link {{ display:block; position:relative; overflow:hidden; background:#e9e9e0; }}
++.venue-photo-link img {{ display:block; width:100%; height:auto; aspect-ratio:16/10; object-fit:cover; }}
++.venue-photo-action {{ position:absolute; bottom:0; right:0; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }}
++.venue-photo figcaption {{ position:absolute; bottom:0; left:0; max-width:100%; background:rgba(20,32,26,.75); border-radius:0 6px 0 0; }}
++.venue-photo figcaption a {{ display:inline-flex; align-items:center; min-height:28px; padding:5px 8px; color:#fff; font-size:9px; line-height:1.4; }}
++.stop[data-support="true"] .card {{ border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; padding-bottom:4px; }}
++.stop[data-support="true"] .time {{ padding:8px 0 0; font-size:11px; }}
++.stop[data-support="true"] .stop-details>summary {{ padding:7px 0 8px; }}
++.stop[data-support="true"] .stop-title {{ font:600 15px/1.4 system-ui; letter-spacing:-.015em; }}
++.stop[data-support="true"] .stop-details>summary {{ display:grid; grid-template-columns:minmax(0,1fr) 20px; align-items:center; min-height:44px; }}
++.stop[data-support="true"] .details-affordance {{ display:none; }}\n.stop[data-support="true"] .stop-details>summary::after {{ content:"+"; grid-column:2; grid-row:1; color:var(--muted); font:20px/1 system-ui; text-align:center; }}\n.stop[data-support="true"] .stop-details[open]>summary::after {{ content:"−"; }}
++.stop[data-support="true"] .status-badge {{ grid-column:1; justify-self:start; }}
++.stop[data-support="true"] {{ margin-bottom:16px; }}
++.stop[data-support="true"] .stop-content {{ padding:0 0 12px; }}
++.stop[data-support="true"] .stop-actions {{ padding:0 0 8px; }}
++.stop[data-support="true"] .action.primary {{ background:transparent; color:var(--accent); border-color:#cbd4c8; }}
++.stop[data-support="true"] .stop-actions .action {{ min-height:44px; }}
++.photo-page-link-wrap {{ display:flex; flex:1 1 130px; flex-direction:column; min-width:0; gap:3px; }}
++.photo-page-link-wrap .action {{ width:100%; flex:0 0 auto; }}
++.photo-page-credit {{ color:var(--muted); font-size:10px; line-height:1.4; }}
++.shopping-backups {{ margin-top:12px; padding:10px; border:1px solid var(--line); border-radius:8px; background:#f7f5ef; }}
++.shopping-backups summary {{ display:flex; align-items:center; min-height:44px; cursor:pointer; font-size:13px; font-weight:650; }}
++.shopping-backups ul {{ padding-left:18px; }}
++.shopping-backups li {{ font-size:13px; line-height:1.5; margin:10px 0; overflow-wrap:anywhere; }}
++.shopping-backups li>a {{ display:inline-flex; align-items:center; min-height:44px; padding:4px; }}
++.shopping-backups .venue-photo {{ margin-top:8px; max-width:400px; }}
++.next-card {{ padding:14px; margin-top:12px; border-radius:12px; background:#e9eee4; display:grid; grid-template-columns:1fr 76px; gap:4px 10px; }}
++.next-card[data-live="false"] {{ display:none; }}
++.next-card:not(.has-image) {{ grid-template-columns:1fr; }}
++.next-card .eyebrow {{ text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:700; }}
++.next-card h2 {{ font:600 21px/1.2 Georgia,serif; }}
++.next-card #next-time {{ font-size:12px; color:var(--muted); }}
++.next-card .eyebrow,.next-card h2,.next-card #next-time {{ grid-column:1; }}
++.next-image {{ grid-column:2; grid-row:1/4; width:76px; height:76px; border-radius:8px; object-fit:cover; }}
++.next-card .actions {{ grid-column:1/-1; }}
++.day-extras {{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:4px 0; margin-top:24px; }}
++.day-extras>summary {{ display:flex; align-items:center; min-height:48px; cursor:pointer; font-size:13px; font-weight:650; }}
++.coffee-card {{ padding:8px 0 18px; }}
++.coffee-card h2 {{ font:600 22px/1.2 Georgia,serif; margin-bottom:8px; }}
++.coffee-card p {{ color:var(--muted); font-size:13px; line-height:1.6; }}
++.map-wrap,.copy-wrap {{ margin:20px 0; border:1px solid var(--line); border-radius:14px; background:var(--card); overflow:hidden; }}
++.map-head,.copy-wrap {{ padding:16px; }}
++.map-head h2,.copy-wrap h2 {{ font:500 26px/1.2 Georgia,serif; margin-bottom:8px; }}
++.map-head p,.copy-wrap p,.offline-note {{ color:var(--muted); font-size:13px; line-height:1.6; }}
++.map-snapshot {{ display:block; width:100%; max-height:65vh; height:auto; background:#e9ece6; }}
++.map-caption {{ padding:10px; font-size:10px; line-height:1.5; color:var(--muted); }}
++.copy-wrap button,.download-day {{ min-height:44px; margin:14px 0 0; padding:10px 14px; border:1px solid var(--accent); border-radius:8px; background:var(--accent); color:white; font-size:13px; font-weight:650; cursor:pointer; }}
++.copy-status {{ margin-top:8px; }}
++.download-day {{ background:transparent; color:var(--accent); margin-top:0; }}
++.offline-note {{ margin-top:10px; }}
++footer {{ max-width:740px; margin:auto; padding:12px 16px 24px; color:var(--muted); font-size:10px; line-height:1.6; }}
++@media(min-width:800px) {{ header {{padding-top:28px;}} main {{padding-top:4px;}} .day-hero {{padding-top:28px;}} .card>.venue-photo img {{aspect-ratio:2/1;}} .day-flow {{padding-left:32px;}} .stop::before {{left:-28px;}} }}
++@media(max-width:350px) {{ header,main {{padding-left:12px;padding-right:12px;}} .day-flow {{padding-left:20px;}} .day-flow::before {{left:5px;}} .flow-marker {{left:-6px;}} .stop::before {{left:-18px;}} .stop-title {{font-size:19px;}} .stop-actions {{padding-left:12px;padding-right:12px;}} .action {{padding:8px 9px;font-size:11px;}} .day-hero h2 {{font-size:26px;}} .period-nav a {{padding-left:8px;padding-right:8px;}} }}
++@media(prefers-reduced-motion:reduce) {{ *,*::before,*::after {{scroll-behavior:auto!important;transition:none!important;}} }}
+ 
+   </style>
+ </head>
+@@ -1173,7 +1120,7 @@
+     picker.value=key; syncCarousel(key);
+     days.forEach(d=>d.hidden=d!==section);
+     const liveDay=liveTripDay(now), tokyo=nowPartsFor('Asia/Tokyo',now), zone=key===first?'America/Chicago':'Asia/Tokyo'; const nowParts=nowPartsFor(zone,now);
+-    const live=!!liveDay && key===liveDay; nextCard.dataset.live=String(live);
++    const live=!!liveDay && key===liveDay; nextCard.dataset.live=String(live); cue.dataset.live=String(live);
+     cue.textContent=live ? (key===first ? `Today · Chicago local time ${{nowParts.hour}}:${{nowParts.minute}}` : `Today in Japan · ${{nowParts.hour}}:${{nowParts.minute}} JST`) : (dateKey(tokyo)<first ? `Preview day · not live · Today in Japan ${{tokyo.hour}}:${{tokyo.minute}} JST` : (dateKey(tokyo)>last ? `Selected day · trip dates have passed · Japan time` : `Selected day · preview · Japan local time ${{tokyo.hour}}:${{tokyo.minute}} JST`));
+     const nowMinute=Number(nowParts.hour)*60+Number(nowParts.minute);
+     const stops=[...section.querySelectorAll('.stop')].filter(s=>s.dataset.closed!=='true');
+@@ -1225,6 +1172,7 @@
+     const markerY=progress*Math.max(0,list.offsetHeight-26);
+     const visible=stops.find(s=>s.offsetTop+s.offsetHeight>markerY+13)||stops.at(-1);
+     const phase=visible?.dataset.period||'morning';
++    section.querySelectorAll('.period-nav a').forEach(a=>{{const target=document.getElementById(a.hash.slice(1)); if(target?.dataset.period===phase)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}});
+     marker.dataset.phase=phase;marker.textContent=phase==='evening'?'☾':phase==='morning'?'☀':'☀';
+     marker.style.transform='translateY('+markerY+'px)';
+     for(const phase of ['noon','afternoon','evening']){{
+@@ -1247,7 +1195,7 @@
+   document.querySelectorAll('[data-tab]').forEach(tab=>tab.addEventListener('click',()=>{{
+     const planning=tab.dataset.tab==='planning'; document.getElementById('today-view').hidden=planning; document.getElementById('planning-view').hidden=!planning;
+     document.querySelectorAll('[data-tab]').forEach(t=>t.setAttribute('aria-pressed',String(t===tab)));
+-    if(!planning) requestAnimationFrame(centerSelectedCard);
++    window.scrollTo({{top:0,behavior:'instant'}}); if(!planning) requestAnimationFrame(()=>{{centerSelectedCard();updateDayFlow();}});
+   }}));
+   document.getElementById('carousel-prev').addEventListener('click',()=>{{const i=picker.selectedIndex;if(i>0)setDay(picker.options[i-1].value);}});
+   document.getElementById('carousel-next').addEventListener('click',()=>{{const i=picker.selectedIndex;if(i<picker.options.length-1)setDay(picker.options[i+1].value);}});
+@@ -1296,10 +1244,6 @@
+     picker.selectedIndex=index; picker.dispatchEvent(new Event('change',{{bubbles:true}}));
+   }},{{passive:true}});
+   dayPlan.addEventListener('touchcancel',clearTouch,{{passive:true}});
+-  document.querySelectorAll('[data-tab]').forEach(tab=>tab.addEventListener('click',()=>{{
+-    const planning=tab.dataset.tab==='planning'; document.getElementById('today-view').hidden=planning; document.getElementById('planning-view').hidden=!planning;
+-    document.querySelectorAll('[data-tab]').forEach(t=>t.setAttribute('aria-pressed',String(t===tab)));
+-  }}));
+   document.getElementById('download-day').addEventListener('click',()=>{{
+     const summaries=JSON.parse(document.getElementById('day-summaries').textContent||'{{}}'), key=picker.value, content=summaries[key]||'No public day summary available.';
+     const blob=new Blob([content],{{type:'text/plain;charset=utf-8'}}), url=URL.createObjectURL(blob), a=document.createElement('a'); a.href=url; a.download=`itinerary-${{key}}-offline.txt`; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);

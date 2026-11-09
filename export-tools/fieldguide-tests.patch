@@ -1,0 +1,46 @@
+--- a/tests/test_export_share.py
++++ b/tests/test_export_share.py
+@@ -146,11 +146,12 @@
+         photo_places["p1"]["photo"] = {"src": "assets/restaurant-photos/" + "a" * 64 + ".jpg", "sourceUrl": "https://example.test/photo", "alt": "Test meal", "credit": "Test venue"}
+         rendered_with_photo = export_share.render_trip_html(photo_trip, photo_places)
+         self.assertIn('class="stop has-photo"', rendered_with_photo)
+-        self.assertRegex(rendered_with_photo, r'</details>\s*<div class="actions stop-actions">.*?</div>\s*<figure class="venue-photo">')
++        self.assertRegex(rendered_with_photo, r'(?s)<figure class="venue-photo">.*?</figure>\s*<details class="stop-details">')
+         self.assertIn('aria-label="Show notes and alternatives for 麺屋テスト"', rendered_with_photo)
+-        self.assertIn('max-width:min(100%,220px)', rendered_with_photo)
++        self.assertIn('aspect-ratio:16/10; object-fit:cover', rendered_with_photo)
+         self.assertNotIn("Day image for", rendered_with_photo)
+-        self.assertIn('class="hero-art-note"', rendered_with_photo)
++        self.assertNotIn('class="hero-art-note"', rendered_with_photo)
++        self.assertIn('class="day-summary"', rendered_with_photo)
+         self.assertIn("class=\"venue-photo\"", rendered)
+         self.assertIn("scroll-margin-top", rendered)
+         self.assertIn("next-image", rendered)
+@@ -168,6 +169,27 @@
+         self.assertIn("dispatchEvent(new Event", rendered)
+         self.assertNotIn("touch-action:none", rendered)
+ 
++    def test_editorial_hierarchy_retains_activity_and_address_in_details(self):
++        trip, places = self.sample_data()
++        rendered = export_share.render_trip_html(trip, places)
++        self.assertIn('<p class="activity">Ramen lunch</p>', rendered)
++        self.assertIn('<p class="summary-address">東京都渋谷区</p>', rendered)
++        self.assertIn('data-support="true"', rendered)
++        self.assertNotIn('background-image:linear-gradient', rendered)
++
++    def test_visual_refresh_keeps_all_visits_and_curated_photos(self):
++        trip, places = export_share.load_trip(SCRIPT.parents[1], "japan-2027-feb")
++        rows = export_share.public_visits(trip, places)
++        rendered = export_share.render_trip_html(trip, places)
++        self.assertEqual(len(rows), 77)
++        self.assertEqual(rendered.count('<li id="stop-'), 77)
++        self.assertEqual(rendered.count('class="day" data-day='), 7)
++        for row in rows:
++            self.assertIn('datetime="' + row["visit"]["startTime"] + '"', rendered)
++        self.assertIn('min-height:44px', rendered)
++        self.assertIn('cue.dataset.live=String(live)', rendered)
++
++
+     def test_scroll_marker_maps_whole_rail_to_available_scroll(self):
+         trip, places = self.sample_data()
+         rendered = export_share.render_trip_html(trip, places)
